@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+           div{
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            padding: 20px;
+           margin: auto;
+           }
+
+         
+           div h2{
+            text-align: center;
+            color: goldenrod;
+           }
+           #submit{
+               
+            background-color: seagreen;
+            color: white;
+            padding: 5px;
+             border: none;
+            border-radius: 5px;
+
+             
+           }
+           
+           #Cancel{
+
+            background-color: red;
+            color: white;
+            padding: 5px;
+             border: none;
+            border-radius: 5px;
+           }
+    
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h2>Login Form</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label>Image</label></td>
+                     <td><input type="file"></td> 
+                      
+                </tr>
+
+                <tr>
+                    <td><label>Username</label></td>
+                    <td><input type="text" placeholder="Username"></td>         
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td><input type="password" placeholder="Password"></td>  
+                </tr>
+                <tr>
+                 <td><label> Email</label></td>
+                 <td><input type="email" placeholder="email"></td>
+                </tr>
+                 <tr>
+                    <td>
+                        <label>Designation</label>
+                    </td>
+                    <td>
+                     <select>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Software Engineer">sr. Software Engineer</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Software Engineer">Tech Lead</option>
+                        <option value="Software Engineer">Project Manager</option>
+                    </select>
+                   </td>
+                 </tr>
+                 <tr>
+                    <td>Biography</td>
+                     <td>
+                        <textarea rows="3" cols="20" placeholder="Write Here"></textarea>
+                     </td>
+                 </tr>
+                 <tr>
+                    <td>Select Gender</td>  
+                    <td><input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Male"> Female </td>  
+                 </tr>
+                 <tr>
+                    <td><input type="checkbox"></td>
+                    <td><span>Accepts Terms & Conditions</span></td>
+                 </tr>
+                    <tr>
+                      <td>
+                         <input id="submit" type="submit" value="Register">       
+                         <input id="Cancel" type="submit" value="Cancel">       
+
+                        </td>
+                </tr>
+
+           </table>
+        </form>
+    </div>
+
+</body>
+</html>

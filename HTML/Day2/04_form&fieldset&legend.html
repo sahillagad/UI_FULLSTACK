@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+               div{
+                width: 900px;
+                  margin: auto;  
+               }
+
+               fieldset{
+                margin: 20px;
+               }
+                
+               h2{
+                text-align: center;
+               }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>School Form</h2>
+             <fieldset>
+                        <legend>Child's Detail</legend>
+                       <table>
+                        <tr>
+                            <td>
+                                <label>Child's First Name</label>
+                                  
+                            </td>
+                            <td>
+                                <input type="text">  
+                            </td>
+                                       
+
+                            <td>
+
+                                <label>Child's Surname</label>
+                            </td>
+                         <td>
+                           
+                            <input type="text">
+                         </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <label>Child's Date Of Birth</label>
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                          
+                            <td><label >
+                               Select Gender
+                            </label></td>
+
+                            <td>
+                                <input type="radio" name="gender"> Male
+                                <input type="radio" name="gender"> Female
+
+                            </td>
+                        </tr>
+                   <tr>
+                    <td>
+                        <label> Home Address</label>
+                  </td>
+                    <td colspan="3">
+                        <textarea  cols="60" rows="5"></textarea>
+                    </td>
+                   </tr>
+                      
+                   <tr>
+                    <td>
+                        <label>Date Of Moving To This Address</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="date">              
+         
+                    </td>
+
+                   </tr>      
+                        </table>
+             </fieldset>
+
+             <fieldset>
+                <legend>Parents/Carers Detail</legend>
+                <table>
+                <tr>
+                    <td><label>Select Proper Title(Please Select)</label></td>
+                    <td colspan="4">
+                        <input type="radio" name="titles">Mr
+                   
+                        <input type="radio" name="titles">Mrs
+                
+                        <input type="radio" name="titles">Miss
+                 
+                        <input type="radio" name="titles">Ms
+                 
+                    
+                        <input type="radio" name="titles">Other
+
+                    </td>
+                 </tr>
+
+                 <tr>
+                    <td>
+                        <label> First Name</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label> Surname Name</label>
+                      
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                 </tr>
+
+                  <tr>
+                     <td>Relationship to child (Please Select)</td>
+                     <td colspan="5">
+                        <input type="radio" name="Relationship">Mother
+                   
+                        <input type="radio" name="Relationship">Father
+                
+                        <input type="radio" name="Relationship">Step Parent
+                 
+                        <input type="radio" name="Relationship">Foster Parent
+                 
+                    
+                        <input type="radio" name="Relationship">Other
+
+                     </td>
+                  </tr>
+
+                  <tr>
+                    <td><label>Tel No </label></td>
+                    <td><input type="number"></td>
+                    <td><label>Tel No </label></td>
+                    <td><input type="number"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                        <label>Mobile Number </label>
+                    </td>
+                    <td>
+                        <input type="number">
+                    </td>
+                    <td>
+                        <label>Email Address</label>
+                    </td>
+                    <td>
+                        <input type="email">
+                    </td>
+                  </tr>
+                  </table>
+             </fieldset>
+         
+
+             <fieldset>
+                <legend>Further information</legend>
+                 <span>If You Have Any Older Childern Attending The School Please Provide Details Below</span>  
+                <table>
+                    <tr>
+
+      
+                   <td><label>Sibling's full name</label></td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label>Sibling's date of birth</label>
+                    </td>
+                    <td>
+                        <input type="date">
+                    </td>
+      
+                </tr>
+                <tr>
+                    <td><label>Sibling's full name</label></td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label>Sibling's date of birth</label>
+                    </td>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
+                 
+                <tr>
+                     <td colspan="4">
+                        NURSERY PROVISION IS 5 MORNING OR 5 AFTERNOON SESSIONS, AS SHOWN BELOW. *Please tick which sessions you prefer.
+                     </td>
+          
+                </tr>
+<tr>
+    <td><label>The morning sessions run from</label></td>
+    <td>8.45 a.m. to 11.45 a.m.</td>
+     <td><input type="radio" name="time"></td>
+</tr>
+
+<tr>
+    <td ><label>The afternoon sessions run from</label></td>
+    <td>12.15 p.m. to 3.15 p.m.</td>
+    <td><input type="radio" name="time"></td>
+</tr>
+
+                   </table>
+                   
+
+
+             </fieldset>
+
+             <fieldset>
+               <legend>
+                Either
+               </legend>
+
+               <table>
+                <tr>
+                    <td>
+                        Where possible parental preference will be taken into account but no guarantee can be given as the allocation of places depends on whether a vacancy exists in the morning or the afternoon. It would be helpful, therefore, if you could also tick the "Either session" if you do not have a strong preference.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                        Please turn over to complete the rest of this application form
+                        </b>
+                    </td>
+                </tr>
+               </table>
+             </fieldset>
+
+
+    </div>
+
+    
+</body>
+</html>
