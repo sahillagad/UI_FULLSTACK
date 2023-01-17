@@ -24,8 +24,10 @@ let c=30
 {
   let c=40
   {
-    let d=60
+    var d=60
 
   }
  console.log(d)
 }
+
+
