@@ -15,7 +15,6 @@ const getMilkFromShop=(Money)=>{
 
 const boilMilk=(milk,water)=>{
 
-  let result=`Boil`
 
 
 }
