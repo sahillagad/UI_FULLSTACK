@@ -34,20 +34,20 @@ let employees = [
   },
 ];
 
-const getAllJuniorEmployee = (startAge, endAge) => {
-  var juniorEmployee = [];
+const AllEmployeeAge = employees.map((emp) => {
+  return emp.age;
+});
+console.log(AllEmployeeAge);
 
-  for (let emp of employees) {
-    if (emp.age >= startAge && emp.age <= endAge) {
-      juniorEmployee.push(emp);
-    }
-  }
+const AllEmployeeName = employees.map((emp) => {
+  return emp.name;
+});
+console.log(AllEmployeeName);
 
-  if (juniorEmployee.length == 0) {
-    console.log("Employee Is Present This Age");
-  } else {
-    console.log(juniorEmployee);
-  }
-};
 
-getAllJuniorEmployee(21, 37);
+const AllEmployeeSNo=employees.map((emp)=>{
+
+    return emp.sno;
+})
+
+console.log(AllEmployeeSNo)
