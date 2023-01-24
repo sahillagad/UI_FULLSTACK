@@ -51,3 +51,21 @@ const AllEmployeeSNo=employees.map((emp)=>{
 })
 
 console.log(AllEmployeeSNo)
+
+
+
+const AllEmployeeDto=employees.map((emp)=>{
+    
+       return {
+        employeesSNo:emp.sno,   
+        employeeName:emp.name,
+        employeesDes:emp.designation   
+         
+           }
+
+})
+
+console.log(AllEmployeeDto);
+
+
+
