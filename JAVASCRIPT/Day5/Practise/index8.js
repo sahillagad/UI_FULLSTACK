@@ -59,3 +59,6 @@ var findEmployeeBySno=(empId)=>{
 
 
 findEmployeeBySno("A001")
+
+
+
