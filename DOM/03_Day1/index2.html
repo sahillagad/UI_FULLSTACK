@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var bodyTag = document.body;
+  var navtag = document.createElement("nav");
+  bodyTag.appendChild(navtag);
+
+  var aTag = document.createElement("a");
+  aTag.innerText = "JS PRACTICE";
+
+  navtag.setAttribute("id", "navbar");
+  navtag.setAttribute(
+    "style",
+    "color:white;background-color:seagreen;padding:20px;text-align:center;font-size:20px"
+  );
+  navtag.appendChild(aTag);
+</script>
