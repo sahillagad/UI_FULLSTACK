@@ -1,0 +1,311 @@
+
+LBP001: Even or Odd Number
+LBP002:    Weird or Not Weird    
+LBP003:    Leap Year or Not
+LBP004: E-commerce company Bookshelf
+LBP005: Next Number from Integer
+LBP006: Free Coffee Cups
+LBP007: Extract Digits from the number
+LBP008: Sum of Digits
+LBP009: Sum of even digits
+LBP010: Sum of odd digits
+LBP011: Sum of prime Digits
+LBP012: Sum of Digits  divisible by 3
+LBP013: Number of digits
+LBP014: Reverse Integer
+LBP015: Duck Number
+LBP016: Number of Occurrences
+LBP017: Paliandrome Number
+LBP018: Check Birth Day
+LBP019: Decimal to Binary
+LBP020: Lucky Customer
+LBP021: Christmas offer
+LBP022: Niven Number 
+LBP023: A Special two digit number
+LBP024: Sum of even numbers 
+LBP025: Celsius to Fahrenheit
+LBP026:    Fahrenheit to Celsius    
+LBP027: Find The Sequence Sum
+LBP028: Climbing a stair case
+LBP029: Prime Number or Not
+LBP030: Valid Palindrome
+LBP031: Create PIN using Three given numbers
+LBP032: Count special characters
+LBP033: Discount for the newyears holiday
+LBP034: Email validation
+LBP035: Data Encryption Key
+LBP036: First Capital Letter
+LBP037: Toggle Case of String
+LBP038: Find Number of Misses
+LBP039: Black Jack Function
+LBP040: Secure Data Transmission
+LBP041: One Time Password
+LBP042: Prime Number Application
+LBP043: Newyear Holiday Discount
+LBP044: War of Numbers
+LBP045: Perfect Number
+LBP046: Magic Date
+LBP047: Oddish or Evenish
+LBP048: Video Length
+LBP049: Next Prime
+LBP050: Sum of digits between two numbers
+LBP051: Defanging an IP address
+LBP052: Jewels and Stones
+LBP053: Shuffled String
+LBP054: Get word count
+LBP055:    String ending matches second String    
+LBP056: Shuffle the Name
+LBP057: Reverse the order of a String
+LBP058: Re-form the word
+LBP059: Anagrams
+LBP060: Max Occurring Character
+LBP061: Color of a chess board square
+LBP062: Find the Bomb
+LBP063: How many vowels
+LBP064: X's and O's, Nobody knows
+LBP065: Stuttering Function
+LBP066: Repeating Letters
+LBP067: Double Letters
+LBP068: Board Game
+LBP069: Remove Every vowel from a String
+LBP070: Space between each character
+LBP071: VOWEL REPLACER
+LBP072: Say "Hello" Say "Bye"
+LBP073: VALID ZIP CODE
+LBP074: Returns the middle character of a string
+LBP075: Index of first vowel
+LBP076: Longest Word
+LBP077: Print all permutations of a string
+LBP078: Removing Duplicate Characters from a string
+LBP079: Swap corner words and reverse middle characters
+LBP080: Valid Hex Code
+LBP081: Even Length Words
+LBP082: Change Every Letter to the Next Letter
+LBP083: First N Vowels
+LBP084: Is the String is in Order?
+LBP085: Integer to English Words
+LBP086: C*ns*r*d Str*ngs
+LBP087: Parentheses balance
+LBP088: American keyboard
+LBP089: Rotate Strings
+LBP090: Missing Letters
+LBP091: Replace Letters With Position In Alphabet
+LBP092: Replace character with it's occurrence
+LBP093: First non-repeated character
+LBP094: Pangrams
+LBP095: Print First Letter of each Word
+LBP096: Number of vowels
+LBP097: Number of consonants
+LBP098: Check only digits
+LBP099: Capitalize Every word first character
+LBP100: Student Rewarded
+LBP101: Reading and writing an array
+LBP102: Sum of all elements in array
+LBP103: Sum of even numbers in an array
+LBP104: Sum of odd numbers in an array
+LBP105: Sum of prime numbers in an array
+LBP106: Sum of palindrome numbers in an array
+LBP107: Sum of strong numbers in an array
+LBP108: Sum of elements in an array ending with 3
+LBP109: Search for an element in an array
+LBP110: Sort the elements in an array ASC
+LBP111: Sort the elements in an array DESC
+LBP112: Binary search
+LBP113: Max element in an array
+LBP114: Min element in an array
+LBP115: Diff between largest and smallest element in array
+LBP116: Second largest element in an array
+LBP117: Second smallest element in an array
+LBP118: Number of occurrences of an element
+LBP119: Inserting element at first position in an array
+LBP120: Inserting element at last position in an array
+LBP121: Delete an element from first location in an array
+LBP122: Delete an element from last location in an array
+LBP123: Delete an element from an array at the given location
+LBP124: Delete an element from an array 
+LBP125: Update an element in an array
+LBP126: Update an element in an array
+LBP127: Array reverse
+LBP128: Increment every element in an array by one unit
+LBP129: Number of duplicate elements in array
+LBP130: Print unique elements in array
+LBP131: Sort an array of 0s, 1s and 2s
+LBP132: Replace every element with the greatest element on its right side
+LBP133: Sum of two arrays
+LBP134: Sum of elements available at even index
+LBP135: Sum of elements available at odd index
+LBP136: Sum of first and last, second and second last and so on
+LBP137: Print reverse of each number in an array
+LBP138: Number of even and odd elements
+LBP139: Reverse only First half of the elements
+LBP140: Difference between two arrays
+LBP141: Rearrange an array
+LBP142: Array of multiples
+LBP143: Inclusive Array Ranges
+LBP144: Find the Average of the Letters
+LBP145: Eliminate Odd Numbers within an Array
+LBP146: Positive Count / Negative Sum
+LBP147: Return the Sum of the Two Smallest Numbers
+LBP148: Retrieve the Last N Elements
+LBP149: Mini Peaks
+LBP150: All Numbers In Array Are Prime
+LBP151: Sum of Adjacent Distances
+LBP152: Odd Even Online Game
+LBP153: Garments Company Apparel
+LBP154: POOLED CAB SERVICE
+LBP155: Kth SHORTEST PROCESSING QUEUE
+LBP156: INDEX FILTERNING
+LBP157: SEVEN BOOM!
+LBP158: Positives and Negatives
+LBP159: Check if All Values Are True
+LBP160: Shared Digits
+LBP161: Combined Consecutive Sequence
+LBP162: Count 5s And Win
+LBP163: Find the Single Number 
+LBP164: Update Every Element
+LBP165: Third Largest and Second smallest 
+LBP166: Sales Report
+LBP167: Online Game
+LBP168: Array pliandrome
+LBP169: Array to Matrix
+LBP170: Matrix to Array
+LBP171: Word Key
+LBP172: Oddly Even
+LBP173: Sweet Seventeen
+LBP174: BeautifyMe
+LBP175: Print Prime Numbers
+LBP176: GCD of two numbers
+LBP177: Secret information
+LBP178: Flight
+LBP179: Arrangement
+LBP180: Parity bits
+LBP181: Second non-repeating character
+LBP182: Absolute difference between prime numbers
+LBP183: Product with successor
+LBP184: Pre-sorted integers in array
+LBP185: Savings
+LBP186: Half ascending and half descending
+LBP187: Last and second-last
+LBP188: Digital root
+LBP189: Absolute difference
+LBP190: Lucky draw
+LBP191: Test paper set
+LBP192: Digits raised to the third power
+LBP193: Grocery Shop
+LBP194: Password change
+LBP195: Video share
+LBP196: Modular exponentiation
+LBP197: Backspace String Compare
+LBP198: Token number
+LBP199: Score of the player
+LBP200: Perfect Math
+LBP201: Reading and Writing Matrix Elements
+LBP202: Sum of all matrix elements
+LBP203: Sum of all even elements
+LBP204: Sum of all odd elements
+LBP205: Sum of all prime elements
+LBP206: Row wise sum in matrix
+LBP207: Column wise sum in matrix
+LBP208: Sum of diagonal elements in matrix 
+LBP209: Sum of opposite diagonal elements in matrix
+LBP210: Sum of first and last element in the matrix
+LBP211: Find the product of diagonal matrix
+LBP212: Find the product of opposite diagonal matrix
+LBP213: Max element in matrix
+LBP214: Min element in matrix
+LBP215: Max element in each row of a matrix
+LBP216: Min element in each row of a matrix
+LBP217: Transpose of the given matrix
+LBP218: Trace of the given matrix
+LBP219: Find the frequency of odd and even 
+LBP220: Identity matrix
+LBP221: Two matrices are equal or not
+LBP222: Addition of two matrices
+LBP223: Subtraction of two matrices
+LBP224: Multiplication of two matrices
+LBP225: Sort all the elements in a matrix in asc order
+LBP226: Sort all the elements in a matrix in desc order
+LBP227: Sort all the elements in a row in asc order
+LBP228: Sort all the elements in a row in desc order
+LBP229:    Sort all the elements in a column in asc order
+LBP230: Sort all the elements in a column in desc order
+LBP231: Sparse matrix
+LBP232: Swaping of two rows
+LBP233: Swaping of two columns
+LBP234: Interchange the diagonals
+LBP235: Upper triangular matrix
+LBP236: Lower triangular matrix
+LBP237: Scalar matrix multiplication
+LBP238: Symmetric matrix
+LBP239: Print diagonal elements
+LBP240: Square of Each Element of Matrix
+LBP241: Sum of even indexed rows in matrix
+LBP242: Sum of odd indexed rows in matrix
+LBP243: Sum of even indexed cols in matrix
+LBP244: Sum of odd indexed cols in matrix
+LBP245: Sum of elements whose sum of row index and col index is even
+LBP246: Sum of elements whose sum of row index and col index is odd
+LBP247: Sum of prime elements 
+LBP248: Count of prime digits in the given matrix
+LBP249: Reverse of each element in matrix
+LBP250: Keep paliandrome number and replace remaining with 0's
+LBP251: Multiples of 10
+LBP252: Employee's Rating Point
+LBP253: Encrypted digits
+LBP254: Easy Shopping
+LBP255: Player's score
+LBP256: GlobalAdd
+LBP257: FunGames
+LBP258: The Past Book
+LBP259: Morning Prayer
+LBP260: Factorial game
+LBP261: Speed Maths
+LBP262: Puzzle
+LBP263: Mathematics class
+LBP264: Power function
+LBP265: Mathematical tricks
+LBP266: Coding standards
+LBP267: Party quiz
+LBP268: Be Positive
+LBP269: Prime Number Busses
+LBP270:    Sentence making
+LBP271: Single Binary Value
+LBP272: Item id
+LBP273: Next Letter
+LBP274: Sum of All Integers
+LBP275: Country Visa Center
+LBP276: Neon Number
+LBP277: Super market pricing
+LBP278: Number Container
+LBP279: Pronic number
+LBP280: Validate ATM PIN
+LBP281: The Actual Memory Size of Your USB Flash Drive
+LBP282: Happy Number
+LBP283: Calculate the Mean
+LBP284: Factorize a Number
+LBP285: Next 5 characters
+LBP286: Composite Number
+LBP287: Hot and Cold Numbers
+LBP288: Not Having Alphabet 'a'
+LBP289: MathAtTip
+LBP290: TodaysApparel
+LBP291: BucketId
+LBP292: Decimal to Octal
+LBP293: Sum of adjacent elements
+LBP294: Vaccination Drive List Preparator
+LBP295: Area of the circle
+LBP296: Divisible by 5 or 7
+LBP297: Ending 3
+LBP298: Min and Max
+LBP299: Lucky String
+LBP300: Last three digits
+LBP301: Reverse and Replace
+LBP302: Party on cruise
+LBP303: Airport Security
+LBP304: Chocolate factory
+LBP305: Digital Logic
+LBP306: Security Key
+LBP307: Data Encode
+LBP308: One Time Password
+LBP309: Nearest paliandrome
+LBP310: FizzBuzz

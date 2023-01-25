@@ -44,28 +44,18 @@ const AllEmployeeName = employees.map((emp) => {
 });
 console.log(AllEmployeeName);
 
+const AllEmployeeSNo = employees.map((emp) => {
+  return emp.sno;
+});
 
-const AllEmployeeSNo=employees.map((emp)=>{
+console.log(AllEmployeeSNo);
 
-    return emp.sno;
-})
-
-console.log(AllEmployeeSNo)
-
-
-
-const AllEmployeeDto=employees.map((emp)=>{
-    
-       return {
-        employeesSNo:emp.sno,   
-        employeeName:emp.name,
-        employeesDes:emp.designation   
-         
-           }
-
-})
+const AllEmployeeDto = employees.map((emp) => {
+  return {
+    employeesSNo: emp.sno,
+    employeeName: emp.name,
+    employeesDes: emp.designation,
+  };
+});
 
 console.log(AllEmployeeDto);
-
-
-
