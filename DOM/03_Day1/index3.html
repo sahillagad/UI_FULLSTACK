@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav {
+        background-color: seagreen;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href=""> DOM MANIPULATION</a>
+    </nav>
+  </body>
+</html>
+<script>
+
+  var NavTag=document.querySelector("nav");
+  NavTag.innerHTML="<h1> HELLO <span style= color:red> GOOD EVENING </span> </h1>"
+
+
+</script>
