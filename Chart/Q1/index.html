@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+      canvas {
+        width: 100%;
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myChart"></canvas>
+  </body>
+</html>
+<script>
+  var D = [];
+  var C = [];
+  var B = [];
+  var A = [];
+  var E = [];
+  var sumA = 0;
+  var sumB = 0;
+  var sumC = 0;
+  var sumD = 0;
+  var sumE = 0;
+  var array = [12, 34, 60, 35, 65, 85];
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] >= 30 && array[i] <= 50) {
+      D.push(array[i]);
+      sumD = sumD + array[i];
+    } else if (array[i] >= 51 && array[i] <= 60) {
+      C.push(array[i]);
+      sumC = sumC + array[i];
+    } else if (array[i] >= 61 && array[i] <= 80) {
+      B.push(array[i]);
+      sumB = sumB + array[i];
+    } else if (array[i] >= 81 && array[i] <= 100) {
+      A.push(array[i]);
+      sumA = sumA + array[i];
+    } else if (array[i] <= 29) {
+      E.push(array[i]);
+      sumE = sumE + array[i];
+    }
+  }
+
+  var a = "A group : " + A.join(" ");
+  var b = "B group : " + B.join(" ");
+  var c = "C group : " + C.join(" ");
+  var d = "D group : " + D.join(" ");
+  var e = "E group : " + E.join(" ");
+
+  var xValues = [a, b, c, d, e];
+  var yValues = [sumA, sumB, sumC, sumD, sumE];
+
+  var barColors = ["#28b662", "#e42939", "#2d8cff", "#e8c3b9", "#fc7401"];
+  new Chart("myChart", {
+    type: "pie",
+    data: {
+      labels: xValues,
+      datasets: [
+        {
+          backgroundColor: barColors,
+          data: yValues,
+        },
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Company Sales Report",
+      },
+    },
+  });
+</script>
