@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .green {
+        padding: 10px;
+        color: white;
+        background-color: seagreen;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .orangered {
+        padding: 10px;
+        color: white;
+        background-color: orangered;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .skyblue {
+        padding: 10px;
+        color: white;
+        background-color: #2d8cff;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .night {
+        padding: 10px;
+        color: white;
+        background-color: #13153b;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .btn {
+        padding: 10px;
+        margin-left: 10px;
+      }
+
+      .btn1 {
+        background-color: orangered;
+        color: white;
+        border: none;
+        border-radius: 2px;
+      }
+
+      .btn2 {
+        background-color: #2d8cff;
+        color: white;
+        border: none;
+        border-radius: 2px;
+      }
+
+      .btn3 {
+        background-color: #13153b;
+        color: white;
+        border: none;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="status">
+      <h2 class="green">Hello World</h2>
+      <button class="btn btn1">Good Morning</button>
+      <button class="btn btn2">Good Afternone</button>
+      <button class="btn btn3">Good Night</button>
+    </div>
+  </body>
+</html>
+<script>
+  var h2Tag = document.querySelector("h2");
+
+  const btn1 = document.querySelector(".btn1");
+  btn1.addEventListener("click", () => {
+    btnFun1();
+  });
+
+  function btnFun1() {
+    h2Tag.textContent = "Good Morning";
+    h2Tag.setAttribute("class", "orangered");
+  }
+
+  const btn2 = document.querySelector(".btn2").addEventListener("click", () => {
+    btnFun2();
+  });
+
+  const btnFun2 = () => {
+    h2Tag.textContent = "Good Afternoon";
+    h2Tag.setAttribute("class", "skyblue");
+  };
+
+  const btn3 = document.querySelector(".btn3").addEventListener("click", () => {
+    btnFun3();
+  });
+
+  const btnFun3 = () => {
+    h2Tag.textContent = "Good Night";
+    h2Tag.setAttribute("class", "night");
+  };
+</script>
