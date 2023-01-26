@@ -148,16 +148,39 @@
       </div>
       <div class="style num2">4</div>
       <div class="style sign">=</div>
-      <div class="style">12</div>
+      <div class="style ans">12</div>
     </div>
   </body>
 </html>
 <script>
+  var inputNum = document.querySelector("#inputNum");
   var rangeInput = document.querySelector("#rangeInput");
+  rangeInput.value=1;
   var outputDiv = document.querySelector(".output");
+  var num1 = document.querySelector(".num1");
+  var num2 = document.querySelector(".num2");
+  var solution = document.querySelector(".ans");
+  inputNum.addEventListener("keyup", () => {
+    myFunction();
+  });
 
   rangeInput.addEventListener("change", () => {
     myFunction();
   });
-  function myFunction() {}
+  function myFunction() {
+   var digit1=inputNum.value;
+   var digit2=rangeInput.value;
+   var ans= (digit1*digit2);
+   
+   num1.textContent=digit1;
+   num2.textContent=digit2;
+   solution.textContent=ans;
+   
+
+      
+
+
+
+
+  }
 </script>
