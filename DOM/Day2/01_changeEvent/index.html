@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 100px;
+        width: 600px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 5px;
+      }
+      .one {
+        height: 35%;
+        background-color: #046dff;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .two {
+        height: 65%;
+        display: flex;
+      }
+
+      .left {
+        width: 60%;
+        text-align: left;
+        text-align: center;
+      }
+
+      select {
+        margin-top: 15px;
+        width: 90%;
+        height: 30px;
+        font-size: 21px;
+      }
+      .right {
+        width: 40%;
+      }
+
+      h3 {
+        font-weight: 100;
+        text-align: center;
+        color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">CHANGE EVENT</div>
+      <div class="two">
+        <div class="box left">
+          <select name="course" id="course">
+            <option value="">Select a Course</option>
+            <option value="HTML">HTML</option>
+            <option value="JAVASCRIPT">JAVASCRIPT</option>
+            <option value="BOOTSTRAP">BOOTSTRAP</option>
+            <option value="JAVA">JAVA</option>
+            <option value="SQL">SQL</option>
+            <option value="REACT Js">REACT JS</option>
+            <option value="ANGULAR Js">ANGULAR JS</option>
+            <option value="CSS">CSS</option>
+          </select>
+        </div>
+        <div class="box right">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+
+var selectTag=document.querySelector("#course");
+var h2Tag=document.querySelector(".right h3");
+selectTag.addEventListener("change",()=>{
+
+    myFunction();
+})
+
+function myFunction(){
+    console.log(selectTag.value)
+    h2Tag.textContent=selectTag.value
+
+}
+
+</script>
