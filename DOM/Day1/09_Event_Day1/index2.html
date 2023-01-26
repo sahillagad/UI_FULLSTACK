@@ -9,7 +9,7 @@
       #container {
         border: 1px solid seagreen;
         height: auto;
-        width: 300px;
+        width: auto;
         text-align: center;
         padding-top: 10px;
         box-shadow: 0 0 10px grey;
@@ -28,10 +28,9 @@
         border: 1px solid #2d8cff;
         height: 70%;
       }
-      pre{
+      p {
         margin: 0;
         text-align: left;
-        font-size: 18px;
       }
     </style>
   </head>
@@ -39,28 +38,16 @@
     <div id="container">
       <input type="text" id="text-input" placeholder="Text" />
       <div id="text-display">
-        <pre></pre>
+        <p></p>
       </div>
     </div>
   </body>
 </html>
 <script>
+  var inputTag = document.querySelector("#text-input");
+  var inputDisplay = document.querySelector("#text-display p");
 
-  var inputTag=document.querySelector("#text-input");
-  var inputDisplay=document.querySelector("#text-display pre");
-
-
-  inputTag.addEventListener('keyup',()=>{
-    
-    var str=inputTag.value;
-    var result=""
-    for(var i=0;i<=str.length-1;i++){
-
-         result=result+(str.substring(0,str.length-i))+"\n";
-
-    } 
-      
-    inputDisplay.textContent=result
-
-  })
+  inputTag.addEventListener("keyup", () => {
+    inputDisplay.textContent = inputTag.value;
+  });
 </script>
