@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .container {
+        margin: auto;
+        width: 1000px;
+        height: 120px;
+        /* border: 1px solid red; */
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+      .top {
+        width: 100%;
+        height: 35%;
+        /* border: 1px solid red; */
+        background-color: #858b8e;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+      .buttom {
+        width: 100%;
+        height: 64%;
+        /* border: 1px solid red; */
+        display: flex;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      .left {
+        width: 35%;
+        height: 100%;
+        /* border: 1px solid red; */
+        border-bottom-left-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        justify-content: center;
+      }
+
+      #inputNum {
+        width: 86%;
+        height: 20px;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid #3165eb;
+      }
+      .right {
+        width: 35%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+
+        padding-left: 10px;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .left div label {
+        font-weight: 800;
+      }
+
+      /*
+       Hide Input Number Arrows
+       Note: It is still possible to increment
+       the number when you scroll inside the 
+       number input.
+      */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .output {
+        display: flex;
+        width: 700px;
+        height: 100px;
+        /* border: 1px solid red; */
+        border-radius: 5px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        margin: auto;
+        margin-top: 30px;
+        justify-content: space-around;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        align-items: center;
+      }
+      .style {
+        width: 70px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3165eb;
+        border-radius: 6px;
+      }
+      .sign {
+        background-color: white;
+        color: #858b8e;
+        font-size: 50px;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">Kids Math Table</div>
+      <div class="buttom">
+        <div class="left">
+          <div>
+            <label for="EnterNumber">Enter a Number</label>
+          </div>
+          <div>
+            <input type="number" id="inputNum" />
+          </div>
+        </div>
+        <div class="right">
+          <div>
+            <label for=" SelectMultiplier"> Select The Multiplier : </label>
+          </div>
+          <div>
+            <input type="range" max="10" min="1" id="rangeInput" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="output">
+      <div class="style num1">3</div>
+      <div>
+        <span class="material-symbols-outlined style sign"> close </span>
+      </div>
+      <div class="style num2">4</div>
+      <div class="style sign">=</div>
+      <div class="style">12</div>
+    </div>
+  </body>
+</html>
+<script>
+  var rangeInput = document.querySelector("#rangeInput");
+  var outputDiv = document.querySelector(".output");
+
+  rangeInput.addEventListener("change", () => {
+    myFunction();
+  });
+  function myFunction() {}
+</script>

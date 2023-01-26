@@ -59,6 +59,10 @@
         height: 30px;
         font-size: 20px;
       }
+      #password{
+        outline: none;
+        border: 1px solid #046dff;
+      }
     </style>
   </head>
   <body>
@@ -84,8 +88,7 @@
   });
 
   function myFunction() {
-  
-    if (inputcheck.checked) {
+    if (inputcheck.checked===true) {
       inputPassword.setAttribute("type", "text");
     } else {
       inputPassword.setAttribute("type", "password");
