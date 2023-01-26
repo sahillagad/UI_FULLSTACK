@@ -156,57 +156,40 @@
 <script>
   var inputNum = document.querySelector("#inputNum");
   var rangeInput = document.querySelector("#rangeInput");
-  rangeInput.value = 1;
   var outputDiv = document.querySelector(".output");
-  var num1 = document.querySelector(".num1");
-  var num2 = document.querySelector(".num2");
-  var solution = document.querySelector(".ans");
-  inputNum.addEventListener("keyup", () => {
-    myFunction();
+  var displayNum1 = document.querySelector(".num1");
+  var displayNum2 = document.querySelector(".num2");
+  var displayAns = document.querySelector(".ans");
+
+  rangeInput.value = 1;
+
+  inputNum.addEventListener("input", (event) => {
+    numberBoxElement(event);
   });
 
-  rangeInput.addEventListener("change", () => {
-    myFunction();
+  rangeInput.addEventListener("input", (event) => {
+    rangeSelectElement(event);
   });
 
-  function myFunction() {
-    var digit1 = inputNum.value;
-    var digit2 = rangeInput.value;
-
-    if (digit1.length > 0 || digit2.length > 0) {
-      if (digit1.length <= 0) {
-        digit1.textContent = 1;
-        digit1 = 1;
-      }
-      var ans = digit1 * digit2;
-      num1.textContent = digit1;
-      num2.textContent = digit2;
-      solution.textContent = ans;
+  function numberBoxElement(event) {
+    if (event.length > 0) {
+      displayNum1.textContent = event.target.value;
+      calculate();
     } else {
-      num1.textContent = 1;
-      num2.textContent = 1;
-      solution.textContent = 1;
-      rangeInput.value = 1;
+      displayNum2.textContent = 1;
     }
   }
 
-  // OR
+  function rangeSelectElement(event) {
+    displayNum2.textContent = event.target.value;
+    calculate();
+  }
 
-  // function myFunction() {
-  //   var digit1 = inputNum.value;
-  //   var digit2 = rangeInput.value;
-  //   if (digit1 != "" && digit2 != "") {
-  //     var ans = digit1 * digit2;
+  function calculate() {
+    const initialValue = inputNum.value;
+    const initialMultiplier = rageInput.value;
 
-  //     num1.textContent = digit1;
-  //     num2.textContent = digit2;
-  //     solution.textContent = ans;
-  //   } else {
-
-  //     num1.textContent = 1;
-  //     num2.textContent = 1;
-  //     solution.textContent = 1;
-  //     rangeInput.value=1
-  //   }
-  // }
+    var ans = initialValue * initialMultiplier;
+    displayNum2.textContent = ans;
+  }
 </script>
