@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 100px;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+
+      .top {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 35%;
+        background-color: #ffc10e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .button {
+        /* border: 1px solid red; */
+        height: 64%;
+        width: 100%;
+        display: flex;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      .left {
+        /* border: 1px solid red; */
+        height: 100%;
+        width: 65%;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right {
+        /* border: 1px solid red; */
+        height: 100%;
+        width: 35%;
+        border-bottom-right-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .inputBox {
+        width: 80%;
+        height: 30px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">Change Password</div>
+      <div class="button">
+        <div class="left">
+          <input type="password" class="inputBox" id="password" />
+        </div>
+        <div class="right">
+          <input type="checkbox" id="check" /> Show Password
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var inputPassword = document.querySelector("#password");
+
+  var inputcheck = document.querySelector("#check");
+  inputcheck.addEventListener("change", () => {
+    myFunction();
+  });
+
+  function myFunction() {
+  
+    if (inputcheck.checked) {
+      inputPassword.setAttribute("type", "text");
+    } else {
+      inputPassword.setAttribute("type", "password");
+    }
+  }
+</script>
