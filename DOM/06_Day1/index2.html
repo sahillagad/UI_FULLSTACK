@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+     <div id="style">
+         <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IMAGE">
+     </div>
+
+</body>
+</html>
+<script>
+
+
+var divTag=document.querySelector("#style");
+divTag.style.width="300px";
+divTag.style.height="200px";
+divTag.style.boxShadow="0 0 10px greay"
+
+
+var imgTag=document.querySelector("img");
+imgTag.style.height="300px"
+imgTag.style.width="200px";
+
+
+//access the Attribute
+var srcAttribute=imgTag.getAttribute("src");
+// console.log(srcAttribute);
+
+
+
+//change the value of attribute
+var changeAttributeValue=imgTag.setAttribute("src","https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=600");
+
+
+//assign Attribute
+imgTag.setAttribute("id","newImage");
+ 
+
+
+
+    
+</script>
