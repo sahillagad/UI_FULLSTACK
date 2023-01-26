@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>Hello</h2>
+      <button id="but1" onclick="myFunction()">Good Morning</button>
+      <button id="but2" onclick="myFunction1()">Good Afternoon</button>
+      <button id="but3" onclick="myFunction2()">Good Evening</button>
+    </div>
+  </body>
+</html>
+<script>
+  var h2Tag = document.querySelector("h2");
+
+  function myFunction() {
+    h2Tag.textContent = "Good Morning";
+    h2Tag.style.color = "orange";
+    h2Tag.style.marginLeft="100px";
+  }
+
+  function myFunction1() {
+    h2Tag.textContent = "Good Afternoon";
+    h2Tag.style.color = "#2d8cff";
+  }
+
+  function myFunction2() {
+    h2Tag.textContent = "Good Evening";
+    h2Tag.style.color = "#35495e";
+  }
+</script>

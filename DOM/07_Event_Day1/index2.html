@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .btn1 {
+        color: white;
+        background-color: tomato;
+      }
+
+      .btn2 {
+        color: white;
+        background-color: #28b662;
+      }
+      #status {
+        height: 20px;
+        width: 300px;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+      #btn0 {
+        margin-left: 10px;
+        height: 22px;
+        width: 30px;
+        border: 1px solid seagreen;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="status"></div>
+    <button class="btn btn1" onclick="btnFun1()">Submit</button>
+    <button class="btn btn2" onclick="btnFun2()">Cancel</button>
+  </body>
+</html>
+<script>
+  var divTag = document.querySelector("#status");
+
+  var btnFun1 = () => {
+    divTag.style.backgroundColor = "tomato";
+    divTag.style.color = "white";
+    divTag.textContent = "FORM CANCEL SUCCESSFULLY..";
+     myfunction();
+  };
+
+
+
+  var btnFun2 = () => {
+    divTag.style.backgroundColor = "#28b662";
+    divTag.style.color = "white";
+    divTag.textContent = "FORM SUBMIT SUCCESSFULLY..";
+    myfunction();
+};
+  var btnFun0 = () => {
+    divTag.style.backgroundColor =""
+    divTag.innerHTML = "";
+  };
+
+  function myfunction(){
+
+    var bottonTag = document.createElement("button");
+    bottonTag.setAttribute("id", "btn0");
+    bottonTag.setAttribute("onclick", "btnFun0()");
+    bottonTag.innerText = "X";
+    divTag.appendChild(bottonTag);
+
+  }
+</script>
