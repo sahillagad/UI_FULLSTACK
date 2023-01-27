@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .info {
+        width: 1000px;
+        height: 200px;
+        margin: auto;
+      
+    }
+      h1 {
+        color: seagreen;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        /* border: 1px solid red; */
+        width: 1000px;
+        margin: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        margin-bottom: 100px;
+      }
+      td,
+      th {
+        padding: 10px;
+      }
+
+      td {
+        border-bottom: 1px solid seagreen;
+        border-top: 1px solid seagreen;
+        background-color: white;
+        text-align: center;
+      }
+      table tr th:nth-child(1) {
+        border-top-left-radius: 10px;
+      }
+      table tr th:last-child {
+        border-top-right-radius: 10px;
+      }
+      th {
+        background-color: #3165eb;
+        color: white;
+      }
+      tfoot {
+        background-color: #3165eb;
+        height: 10px;
+        width: 100px;
+        border: 1px solid red;
+        text-align: center;
+        color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+     tfoot tr{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+     }
+      tfoot td{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #3165eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <h1>User List</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+        reprehenderit tenetur facilis quisquam quibusdam dicta nam placeat quasi
+        eligendi modi, quis nostrum sequi id voluptas harum quidem esse. Rem
+        placeat nulla aperiam ab eos numquam aut amet. Alias, accusamus
+        provident incidunt ab distinctio saepe facere. Sit reprehenderit sequi
+        nostrum harum!
+      </p>
+    </div>
+
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>WEBSITE</th>
+            <th>STREET</th>
+            <th>CITY</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">ALL RIGHT RESERVE</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <script src="./indexd.js" type="module"></script>
+    <script src="./userDetails.js"></script>
+  </body>
+</html>
