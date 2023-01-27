@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main{
+         display: flex;
+         
+      }
+      table{
+          /* border: 1px solid red; */
+          margin-left: 200px;
+          margin-top: 150px;
+          width: 800px;     
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        }
+        th{
+          border: 1px solid #3165eb;
+          background-color:#3165eb ;
+          color: white;
+          border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+       
+        }
+        td{
+          border: 1px solid seagreen;
+           text-align: center;
+        }
+      td,th{
+       padding: 10px;
+       
+      }
+      .container {
+        /* border: 1px solid red; */
+        width: 400px;
+        height: 360px;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+      .top {
+        height: 20%;
+        width: 100%;
+        background-color: seagreen;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .buttom div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .buttom div input {
+        outline: none;
+        border: 1px solid #3165eb;
+        width: 60%;
+        height: 20px;
+      }
+
+      select {
+        outline: none;
+        border: 1px solid #3165eb;
+        width: 62%;
+        height: 25px;
+      }
+
+      .submit {
+        margin: auto;
+        padding: 6px;
+        width: 120px;
+        border: 1px solid tomato;
+        background-color: white;
+        color: tomato;
+        border-radius: 3px;
+      }
+      .submit:hover{
+    
+        background-color: tomato;
+        color: white;
+      }
+      label {
+        color: seagreen;
+      }
+
+      .footer {
+        background-color: seagreen;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="top">Enter Details</div>
+        <div class="buttom">
+          <div>
+            <label for="SNO">S.NO </label>
+            <input type="text"  id="sno"/>
+          </div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text"  id="name"/>
+          </div>
+          <div>
+            <label for="age">Age</label>
+            <input type="number" id="age" />
+          </div>
+          <div>
+            <label for="Designation">Designation</label>
+            <select name="Designation" id="designation">
+              <option value=""></option>
+              <option value="Junior Engineer">Junior Engineer</option>
+              <option value="Software Engineer">Software Engineer</option>
+              <option value="Senior Software Engineer">
+                Senior Software Engineer
+              </option>
+              <option value="Project Lead">Project Lead</option>
+              <option value="Project Manager">Project Manager</option>
+              <option value="Program Manager">Program Manager</option>
+            </select>
+          </div>
+          <div>
+            <label for="location">LOCATION</label>
+            <input type="text"  id="location"/>
+          </div>
+          <div>
+            <button class="submit" id="submit">SUBMIT</button>
+          </div>
+          <div class="footer"></div>
+        </div>
+      </div>
+ 
+      <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>S.NO</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Designation</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </body>
+</html>
+<script>
+let sno=document.querySelector("#sno");
+let name=document.querySelector("#name");
+let age=document.querySelector("#age");
+let designation=document.querySelector("#designation");
+let location1=document.querySelector("#location");
+let submitbut=document.querySelector("#submit");
+let tbodyTag=document.querySelector("tbody");
+submitbut.addEventListener("click",()=>{
+
+myFunction();
+
+})
+
+var empDetail=[]
+function myFunction(){
+  tbodyTag.innerHTML=""
+var obj={
+       SNO:sno.value,
+       Name:name.value,
+       Age:age.value,
+       Designation:designation.value,
+       Location:location1.value
+}
+
+// console.log(obj);
+empDetail.push(obj);
+
+for(var i=0;i<empDetail.length;i++){
+  var item=empDetail[i];
+  var trTag=document.createElement("tr");
+ for(var k in item){
+ 
+  var tdTag=document.createElement("td");
+  tdTag.textContent=item[k]; 
+  trTag.appendChild(tdTag)
+}
+tbodyTag.appendChild(trTag); 
+}
+}
+
+
+
+
+</script>
