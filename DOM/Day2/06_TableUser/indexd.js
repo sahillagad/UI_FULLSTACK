@@ -8,40 +8,43 @@ import * as userDetails from "./userDetails.js";
 var tbody = document.querySelector("tbody");
 var details = userDetails.getAllUser();
 
-for (var i = 0; i < details.length; i++) {
-  var trTag = document.createElement("tr");
-  var item = details[i];
+// here WE Want as soon as we loaded the page data fill be laod
+// for that one event is there;
+// DOMContentLoaded is event
 
-  var tdTag = document.createElement("td");
-  tdTag.innerText = item.id;
-  trTag.appendChild(tdTag);
+var windowLoad = window.addEventListener("DOMContentLoaded", () => {
+  myFunction();
+});
 
+function myFunction() {
+  for (var i = 0; i < details.length; i++) {
+    var trTag = document.createElement("tr");
+    var item = details[i];
 
-  var tdTag1 = document.createElement("td");
-  tdTag1.innerText = item.name;
-  trTag.appendChild(tdTag1);
+    var tdTag = document.createElement("td");
+    tdTag.innerText = item.id;
+    trTag.appendChild(tdTag);
 
+    var tdTag1 = document.createElement("td");
+    tdTag1.innerText = item.name;
+    trTag.appendChild(tdTag1);
 
+    var tdTag2 = document.createElement("td");
+    tdTag2.innerText = item.email;
+    trTag.appendChild(tdTag2);
 
-  var tdTag2 = document.createElement("td");
-  tdTag2.innerText = item.email;
-  trTag.appendChild(tdTag2);
+    var tdTag3 = document.createElement("td");
+    tdTag3.innerText = item.website;
+    trTag.appendChild(tdTag3);
 
+    var tdTag4 = document.createElement("td");
+    tdTag4.innerText = item.address.street;
+    trTag.appendChild(tdTag4);
 
-  var tdTag3 = document.createElement("td");
-  tdTag3.innerText = item.website;
-  trTag.appendChild(tdTag3);
+    var tdTag5 = document.createElement("td");
+    tdTag5.innerText = item.address.city;
+    trTag.appendChild(tdTag5);
 
-
-  var tdTag4 = document.createElement("td");
-  tdTag4.innerText = item.address.street;
-  trTag.appendChild(tdTag4);
-
-
-
-  var tdTag5 = document.createElement("td");
-  tdTag5.innerText = item.address.city;
-  trTag.appendChild(tdTag5);
-
-  tbody.appendChild(trTag);
+    tbody.appendChild(trTag);
+  }
 }

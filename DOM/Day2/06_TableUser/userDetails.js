@@ -243,3 +243,14 @@ export const getAllUser = () => {
 // file anyother /outside this fill than declare export
 // export multipal function is there thats why at time import we use the * star means  all function give
 // emport all things that tailling by give * star
+
+
+
+// if another function is there that give All customer
+/*
+export const getAllCustomer = () => {
+  return ListALLCustomer;
+};
+import time we use * start it will give all data
+
+*/
