@@ -11,6 +11,10 @@ import * as userDetails from "./userDetails.js";
 // After Load The Html
 // Data is load and Show That data in the user
 
+//DOMContentLoaded is event is Ract is useEffect() ,isComponentLoaded(){}
+// jQuery ${document}.ready(()=>{});
+
+
 var windowLoad = window.addEventListener("DOMContentLoaded", () => {
   myFunction();
 });

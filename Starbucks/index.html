@@ -12,117 +12,102 @@
   />
 
   <style>
-    body{
-        padding: 0;
-        margin: 0;
+    body {
+      padding: 0;
+      margin: 0;
     }
-    .navbar{
-        /* border: 1px solid red; */
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-         width: 100%;
-         position: fixed;
-   z-index: 5;
-         background-color: white;
-      }
-    .nav{
-        /* border: 1px solid red; */
-        width: 80%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-       
+    .navbar {
+      /* border: 1px solid red; */
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+      width: 100%;
+      position: fixed;
+      z-index: 5;
+      background-color: white;
     }
- .left{
-    /* border: 1px solid red; */
-   display: flex;
-   width: 70%;
-}
-.left .menu{
-    padding-left: 50px;
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  
-}
-.menu div{
-    width: 60px;
-    padding: 10px;
-    font-size: 20px;
-    
-}
+    .nav {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .left {
+      display: flex;
+      width: 70%;
+    }
+    .left .menu {
+      padding-left: 50px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .menu div {
+      width: 60px;
+      padding: 10px;
+      font-size: 20px;
+    }
 
-.menu div:nth-child(1) a{
-  text-decoration: underline;
-  	text-decoration-color: seagreen;
+    .menu div:nth-child(1) a {
+      text-decoration: underline;
+      text-decoration-color: seagreen;
+    }
+    .menu div a {
+      color: #797d7d;
+      text-decoration: none;
+    }
+    .right {
+      display: flex;
+      width: 30%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .logo img {
+      margin: 6px;
+      width: 50px;
+      height: 50px;
+    }
 
-}
-.menu div a{
-    color: #797d7d ;
-   text-decoration: none;
-}
- .right{
-    /* border: 1px solid red; */
-    display: flex;
-    width: 30%;
-    justify-content: space-evenly;
-    align-items: center;
-
- }
- .logo img{
-    margin: 6px;
-    width: 50px;
-    height: 50px;
- }
-
- .right div input{
-        
-  border: none;
-  /* outline: none; */
-  border-radius:10px ;
-  width: 220px;
-  height: 25px;
-  padding-left:10px ;
-  color: #797d7d;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
- }
-.user a span{
-
-  font-size: 30px;
-  color: #797d7d;
-}
-
+    .right div input {
+      border: none;
+      border-radius: 10px;
+      width: 220px;
+      height: 25px;
+      padding-left: 10px;
+      color: #797d7d;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    }
+    .user a span {
+      font-size: 30px;
+      color: #797d7d;
+    }
   </style>
   <body>
     <head>
       <nav class="navbar">
         <div class="nav">
-         
-            <div class="left">
-                <div class="logo">
-                  <a href="#">
-                    <img src="./Other/logo.png" alt="logo" />
-
-                  </a>
-                  </div>
+          <div class="left">
+            <div class="logo">
+              <a href="#">
+                <img src="./Other/logo.png" alt="logo" />
+              </a>
+            </div>
             <div class="menu">
               <div>
                 <a href="">Home</a>
-                </div>
+              </div>
               <div>
                 <a href="#">Gift</a>
-                </div>
+              </div>
               <div>
                 <a href="#">Order</a>
-                </div>
+              </div>
               <div>
                 <a href="#">Pay</a>
-
-                </div>
+              </div>
               <div>
                 <a href="#">Store</a>
-                </div>
+              </div>
             </div>
           </div>
 
@@ -136,13 +121,11 @@
             <div class="user">
               <a href="#">
                 <span class="material-symbols-outlined"> account_circle </span>
-
               </a>
             </div>
           </div>
         </div>
       </nav>
     </head>
-
   </body>
 </html>
