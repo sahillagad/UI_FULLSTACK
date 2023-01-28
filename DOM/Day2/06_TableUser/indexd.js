@@ -5,12 +5,14 @@ import * as userDetails from "./userDetails.js";
 //the   * (start we not use that why we give the userDetails as alias Support)
 // from where this data is come
 
-var tbody = document.querySelector("tbody");
-var details = userDetails.getAllUser();
-
 // here WE Want as soon as we loaded the page data fill be laod
 // for that one event is there;
-// DOMContentLoaded is event
+// DOMContentLoaded is event i want when open html data is read and show it
+// After Load The Html
+// Data is load and Show That data in the user
+
+var tbody = document.querySelector("tbody");
+var details = userDetails.getAllUser(); // Data  Is Come From Here
 
 var windowLoad = window.addEventListener("DOMContentLoaded", () => {
   myFunction();
