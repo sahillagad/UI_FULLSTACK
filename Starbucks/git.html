@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      body,
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navbar {
+        /* border: 1px solid red; */
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        width: 100%;
+        position: fixed;
+        z-index: 15;
+        background-color: white;
+      }
+      .nav {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .left {
+        display: flex;
+        width: 70%;
+      }
+      .left .menu {
+        padding-left: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .menu div {
+        width: 60px;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .menu div:nth-child(2) a {
+        text-decoration: underline;
+        text-decoration-color: seagreen;
+      }
+      .menu div a {
+        color: #797d7d;
+        text-decoration: none;
+      }
+      .right {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .logo img {
+        margin: 6px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .right div input {
+        border: none;
+        border-radius: 10px;
+        width: 220px;
+        height: 25px;
+        padding-left: 10px;
+        color: #797d7d;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        outline: none;
+      }
+      .user a span {
+        font-size: 30px;
+        color: #797d7d;
+      }
+
+      .knowMore {
+        position: relative;
+        top: 70px;
+        height: 250px;
+        background-color: #1e3932;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 2 */
+      #wrapper1 {
+        /* border: 1px solid red; */
+        width: 100%;
+        max-width: 85%;
+        margin: auto;
+      }
+
+      #carousel1 {
+        overflow: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+
+      #carousel1::-webkit-scrollbar {
+        height: 0;
+      }
+
+      #prev1,
+      #next1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background: white;
+        border: none;
+        padding: 8px;
+        border-radius: 50%;
+        outline: 0;
+        cursor: pointer;
+        position: absolute;
+      }
+
+      #prev1 {
+        top: 50%;
+        left: 0;
+        transform: translate(50%, -50%);
+        display: none;
+      }
+
+      #next1 {
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      #content1 {
+        display: grid;
+        grid-gap: 16px;
+        grid-auto-flow: column;
+        margin: auto;
+        box-sizing: border-box;
+      }
+
+      .tabs1 {
+        width: 1140px;
+        height: 200px;
+        /* border: 1px solid red; */
+        display: flex;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: #dfc49d;
+
+        border-radius: 10px;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+          rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+      }
+      .tabs1 .wcc1 {
+        width: 20%;
+      }
+
+      .tabs1 .wcc1 img {
+        height: 200px;
+        width: 100px;
+      }
+
+      .tabs1 .wcc2 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        padding: 20px;
+      }
+      .tabs1 .wcc2 a {
+        color: #201b16;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .tabs1 .wcc2 h4 {
+        color: #201b16;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .tabs1 .wcc2 p {
+        color: #201b16;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .tabs1 .wcc2 h5 {
+        margin-top: 0;
+      }
+      .tabs1 .wcc2 .t3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .t3 button {
+        padding: 10px;
+        border-radius: 20px;
+        width: 200px;
+        color: white;
+        background-color: seagreen;
+        border: none;
+        margin-right: 20px;
+      }
+
+      .Category {
+        margin-top: 70px;
+        /* border: 1px solid red; */
+        display: flex;
+        background-color: #cbcbcb;
+        color: white;
+        padding-left: 140px;
+      }
+
+      .Category div {
+        padding: 10px;
+        font-weight: bold;
+      }
+      h3 {
+        margin-left: 140px;
+        padding: 10px;
+      }
+
+      .any {
+        display: flex;
+        width: 85%;
+        height: 200px;
+        /* border: 1px solid red; */
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+      }
+      .any .box2 {
+        width: 35%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+      }
+
+      .any .box2 div img {
+        width: 150px;
+        height: 100px;
+        z-index: 10;
+        position: relative;
+        left: 40px;
+        top: 20px;
+        border-radius: 7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+      .r1 {
+        /* border: 1px solid red; */
+        border-radius: 7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      .r1 div {
+        /* border: 1px solid red; */
+        margin-left: 50px;
+        height: 90%;
+
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+      }
+
+      .r1 div h6 {
+        font-size: 15px;
+      }
+
+      .r1 div p {
+        color: #797d7d;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      .r1 div button {
+        padding: 10px;
+        width: 100px;
+        border-radius: 20px;
+        color: white;
+        background-color: #006241;
+        border: none;
+      }
+
+      .footer {
+      background-color: #0e382c;
+      width: auto;
+      height: 350px;
+      display: flex;
+      padding-top: 100px;
+      justify-content: center;
+      justify-content: space-around;
+    }
+    .footer div li {
+      align-items: center;
+      padding: 15px;
+      color: white;
+    }
+
+    .footer div li:nth-child(1) {
+      font-weight: bold;
+    }
+
+    .copy {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+         padding-right:20px ;
+      background-color: #0e382c;
+      color: white;
+      border-top: 1px solid white;
+  
+    }
+
+    .cl1 {
+      display: flex;
+      flex-direction: row;
+    }
+    .copy .cl1 div{
+
+      padding: 15px;
+  }
+    </style>
+  </head>
+  <body>
+    <head>
+      <nav class="navbar">
+        <div class="nav">
+          <div class="left">
+            <div class="logo">
+              <a href="#">
+                <img src="./Other/logo.png" alt="logo" />
+              </a>
+            </div>
+            <div class="menu">
+              <div>
+                <a href="">Home</a>
+              </div>
+              <div>
+                <a href="#">Gift</a>
+              </div>
+              <div>
+                <a href="#">Order</a>
+              </div>
+              <div>
+                <a href="#">Pay</a>
+              </div>
+              <div>
+                <a href="#">Store</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <div>
+              <input
+                type="search"
+                placeholder="Looking for something specific ?"
+              />
+            </div>
+            <div class="user">
+              <a href="#">
+                <span class="material-symbols-outlined"> account_circle </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </head>
+    <div class="knowMore">
+      <div id="wrapper1">
+        <div id="carousel1">
+          <div id="content1">
+            <div class="tabs1">
+              <div class="wcc1">
+                <img src="./Other/Hazelnut_Dolce_frappuccino_eae87c32b3.png" />
+              </div>
+              <div class="wcc2">
+                <div class="t1">
+                  <a href="#">Presenting</a>
+                </div>
+                <div class="t2">
+                  <h4>Hazelnut Dolce Range</h4>
+                  <p>
+                    Treat your teste buds to blend of Hazelnut,roast coffee and
+                    mocha with <br />
+                    Hazelnut Dolce frappuccino
+                  </p>
+                </div>
+                <div class="t3">
+                  <div>
+                    <h6>Starting From</h6>
+                    <h5>₹ 470.00</h5>
+                  </div>
+                  <div>
+                    <button style="background-color: white; color: black">
+                      Order Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs1" style="background-color: #ec9718">
+              <div class="wcc1">
+                <img src="./Other/Group_1241_085b3f7a9e (1).png" />
+              </div>
+              <div class="wcc2">
+                <div class="t1">
+                  <a href="#">Presenting</a>
+                </div>
+                <div class="t2">
+                  <h4>Hazelnut Dolce Range</h4>
+                  <p>
+                    Treat your teste buds to blend of Hazelnut,roast coffee and
+                    mocha with <br />
+                    Hazelnut Dolce frappuccino
+                  </p>
+                </div>
+                <div class="t3">
+                  <div>
+                    <h6>Starting From</h6>
+                    <h5>₹ 470.00</h5>
+                  </div>
+                  <div>
+                    <button>Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs1" style="background-color: #fb997c">
+              <div class="wcc1">
+                <img src="./Other/Bonus_Stars_2d6733cfde (1).png" />
+              </div>
+              <div class="wcc2">
+                <div class="t1">
+                  <a href="#">Presenting</a>
+                </div>
+                <div class="t2">
+                  <h4>Hazelnut Dolce Range</h4>
+                  <p>
+                    Treat your teste buds to blend of Hazelnut,roast coffee and
+                    mocha with <br />
+                    Hazelnut Dolce frappuccino
+                  </p>
+                </div>
+                <div class="t3">
+                  <div>
+                    <h6>Starting From</h6>
+                    <h5>₹ 470.00</h5>
+                  </div>
+                  <div>
+                    <button style="background-color: white; color: black">
+                      Order Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs1" style="background-color: #006241">
+              <div class="wcc1">
+                <img src="./Other/Barista_Pride_ca8aec571f.png" />
+              </div>
+              <div class="wcc2">
+                <div class="t1">
+                  <a href="#">Presenting</a>
+                </div>
+                <div class="t2">
+                  <h4>Hazelnut Dolce Range</h4>
+                  <p>
+                    Treat your teste buds to blend of Hazelnut,roast coffee and
+                    mocha with <br />
+                    Hazelnut Dolce frappuccino
+                  </p>
+                </div>
+                <div class="t3">
+                  <div>
+                    <h6>Starting From</h6>
+                    <h5>₹ 470.00</h5>
+                  </div>
+                  <div>
+                    <button style="background-color: white; color: black">
+                      Order Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs1" style="background-color: #ea3664">
+              <div class="wcc1">
+                <img src="./Other/Image_50_bc2d04c1d9.png" />
+              </div>
+              <div class="wcc2">
+                <div class="t1">
+                  <a href="#">Presenting</a>
+                </div>
+                <div class="t2">
+                  <h4>Hazelnut Dolce Range</h4>
+                  <p>
+                    Treat your teste buds to blend of Hazelnut,roast coffee and
+                    mocha with <br />
+                    Hazelnut Dolce frappuccino
+                  </p>
+                </div>
+                <div class="t3">
+                  <div>
+                    <h6>Starting From</h6>
+                    <h5>₹ 470.00</h5>
+                  </div>
+                  <div>
+                    <button style="background-color: white; color: black">
+                      Order Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button id="prev1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path
+                d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+              />
+            </svg>
+          </button>
+          <button id="next1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path
+                d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="Category">
+      <div class="check">FEATURED</div>
+      <div class="check">ANYTIME</div>
+      <div class="check">CONGRATULATIONS</div>
+      <div class="check">THANK YOU</div>
+    </div>
+
+    <h3>Anytime</h3>
+
+    <hr />
+
+    <div class="any">
+      <div class="box2">
+        <div>
+          <img
+            src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/17d2c94d_1bbe_47d5_874c_c32af5bb2c18_fc9ce3422f.png"
+            alt=""
+          />
+        </div>
+        <div class="r1">
+          <div>
+            <h6>India Exclusive</h6>
+            <p>
+              Bring in the festive season and make each celebration memorable
+            </p>
+            <button>Add Item</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div>
+          <img
+            src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/71d3780c_be6e_46b1_ab01_8a2bce244a7f_1_26502c2483.png"
+            alt=""
+          />
+        </div>
+        <div class="r1">
+          <div>
+            <h6>India Exclusive</h6>
+            <p>
+              Bring in the festive season and make each celebration memorable
+            </p>
+            <button>Add Item</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div>
+          <img
+            src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/7c6f7c64_3f89_4ba2_9af8_45fc6d94ad35_df43378185.jpg"
+            alt=""
+          />
+        </div>
+        <div class="r1">
+          <div>
+            <h6>India Exclusive</h6>
+            <p>
+              Bring in the festive season and make each celebration memorable
+            </p>
+            <button>Add Item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="any" style="justify-content: flex-start">
+      <div class="box2">
+        <div>
+          <img
+            src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/97ee3280_2f05_43ad_bd94_f5c184d4f502_1_2d1b049023.png"
+            alt=""
+          />
+        </div>
+        <div class="r1">
+          <div>
+            <h6>India Exclusive</h6>
+            <p>
+              Bring in the festive season and make each celebration memorable
+            </p>
+            <button>Add Item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+
+    <div
+      class="tabs1"
+      style="background-color: #006241; margin: auto; margin-top: 100px;margin-bottom: 100px;"
+    >
+      <div class="wcc1">
+        <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/Group_977_6e5853906b.png" />
+      </div>
+      <div class="wcc2">
+        <div class="t1">
+          <a href="#" style="color: white;">Presenting</a>
+        </div>
+        <div class="t2" >
+          <h4 style="color: white;"> Ruby, Our Barista Has A Message For You</h4>
+          <p style="color: white;">
+            Join In With The Warm Musings And New Beginnings. Make Memories With Starbucks! <br />
+            
+          </p>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <img src="./Other/logo.png" alt="logo" />
+      </div>
+
+      <div>
+        <ul type="none">
+          <li>About Us</li>
+          <li>Our Heritage</li>
+          <li>Our Company</li>
+          <li>Coffeehouse</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul type="none">
+          <li>Responsibility</li>
+          <li>Community</li>
+          <li>Ethical Sourcing</li>
+          <li>Environment</li>
+          <li>Diversity</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul type="none">
+          <li>Quick Links</li>
+          <li>Careers</li>
+          <li>Season's Gifting</li>
+          <li>FAQs</li>
+          <li>Customer Service</li>
+          <li>Delivery</li>
+        </ul>
+      </div>
+
+      <div></div>
+
+      <div>
+        <div>
+          <h4 style="color: white">SOCIAL MEDIA</h4>
+        </div>
+        <div>
+          <img src="./Other/instagram.svg" alt="" />
+          <img src="./Other/facebook.svg" alt="" />
+          <img src="./Other/twitter.svg" alt="" />
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column">
+        <img src="./Other/appstoreAndroid.png" alt="appstoreAndroid" />
+        <img src="./Other/appstoreiOS.png" alt="appstoreAndroid" />
+      </div>
+    </footer>
+    <div class="copy">
+      <div class="cl1">
+        <div>Web Accessiblity</div>
+        <div>Privacy Statement</div>
+        <div>Terms of Use</div>
+        <div>Contact Us</div>
+      </div>
+      <div class="cl2">
+        © 2023 Starbucks Coffee Company. All rights reserved.
+      </div>
+    </div>
+
+    <script>
+      // carousel 2
+      const gap1 = 16;
+
+      const carousel1 = document.getElementById("carousel1"),
+        content1 = document.getElementById("content1"),
+        next1 = document.getElementById("next1"),
+        prev1 = document.getElementById("prev1");
+
+      next1.addEventListener("click", (e) => {
+        carousel1.scrollBy(width + gap1, 0);
+        if (carousel1.scrollWidth !== 0) {
+          prev1.style.display = "flex";
+        }
+        if (
+          content1.scrollWidth - width - gap1 <=
+          carousel1.scrollLeft + width
+        ) {
+          next1.style.display = "none";
+        }
+      });
+      prev1.addEventListener("click", (e) => {
+        carousel1.scrollBy(-(width + gap1), 0);
+        if (carousel1.scrollLeft - width - gap1 <= 0) {
+          prev1.style.display = "none";
+        }
+        if (
+          !content1.scrollWidth - width - gap1 <=
+          carousel1.scrollLeft + width
+        ) {
+          next1.style.display = "flex";
+        }
+      });
+
+      let width = carousel1.offsetWidth;
+      window.addEventListener("resize", (e) => (width = carousel1.offsetWidth));
+
+      var divtag = document.querySelectorAll(".check");
+
+      divtag[0].addEventListener("click", () => {
+        myFunction(divtag[0]);
+      });
+
+      divtag[1].addEventListener("click", () => {
+        myFunction(divtag[1]);
+      });
+
+      divtag[2].addEventListener("click", () => {
+        myFunction(divtag[2]);
+      });
+
+      divtag[3].addEventListener("click", () => {
+        myFunction(divtag[3]);
+      });
+
+      function myFunction(divValue) {
+        if (divValue.style.color == "seagreen") {
+          divValue.style.color = "white";
+        } else {
+          divValue.style.color = "seagreen";
+        }
+      }
+    </script>
+  </body>
+</html>

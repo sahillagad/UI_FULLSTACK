@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Starbucks Coffee Company</title>
+    <link rel="icon" type="images/x-icon" href="./Other/logo.png" />
   </head>
   <link
     rel="stylesheet"
@@ -12,9 +13,11 @@
   />
 
   <style>
-    body {
+    body,
+    * {
       padding: 0;
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
     }
     .navbar {
       /* border: 1px solid red; */
@@ -76,13 +79,513 @@
       color: #797d7d;
       box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
         rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      outline: none;
     }
     .user a span {
       font-size: 30px;
       color: #797d7d;
     }
-  </style>
-  <body>
+
+    .knowMore {
+      position: relative;
+      top: 70px;
+      height: 80px;
+      width: auto;
+      /* border: 1px solid red; */
+      background-color: #1e3932;
+      margin-bottom: 70px;
+    }
+
+    .more {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+    .more p {
+      font-size: 20px;
+      font-weight: 100;
+    }
+    .more button {
+      background-color: #1e3932;
+      border-radius: 20px;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+    }
+    .handcrafted {
+      /* border: 1px solid red; */
+      height: 300px;
+      width: auto;
+      margin-bottom: 10px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+    .handcrafted .box {
+      /* border: 1px solid red; */
+      width: 80%;
+      margin: auto;
+      background-color: #fffbee;
+    }
+    .handcrafted .head1 {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: bolder;
+      color: #1e3932;
+    }
+    .handcrafted .Product {
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .Product div {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      text-align: center;
+      color: #1e3932;
+      font-weight: bold;
+    }
+    .Product div img {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    #wrapper {
+      width: 100%;
+      max-width: 85%;
+      position: relative;
+      margin: auto;
+    }
+
+    #carousel {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #carousel::-webkit-scrollbar {
+      height: 0;
+    }
+
+    #prev,
+    #next {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #prev {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+
+    #next {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    #content {
+      display: grid;
+      grid-gap: 16px;
+      grid-auto-flow: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    .tabs {
+      width: 400px;
+      height: 150px;
+      /* border: 1px solid red; */
+      display: flex;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+        rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    }
+    .tabs div:nth-child(1) {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      /* border: 1px solid red; */
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+    .tabs div:nth-child(1) label {
+      font-weight: 900;
+      margin-top: 10px;
+    }
+    .tabs div .item {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+    }
+
+    .tabs div:nth-child(2) {
+      width: 60%;
+      /* border: 1px solid red; */
+      margin: auto;
+      height: 120px;
+      padding-top: 30px;
+      padding-left: 10px;
+    }
+    .tabs div:nth-child(2) * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .but {
+      position: relative;
+      left: 130px;
+      top: 20px;
+      display: inline-block;
+      background-color: seagreen;
+      color: white;
+      border: 1px solid seagreen;
+    }
+
+    .tabs div h6 {
+      color: #a2a2a2;
+    }
+    h3 {
+      display: inline-block;
+      margin-left: 140px;
+      color: #1e3932;
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bolder;
+    }
+
+    /* 2 */
+    #wrapper1 {
+      width: 100%;
+      max-width: 80%;
+      position: relative;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    #carousel1 {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #carousel1::-webkit-scrollbar {
+      height: 0;
+    }
+
+    #prev1,
+    #next1 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #prev1 {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+
+    #next1 {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    #content1 {
+      display: grid;
+      grid-gap: 16px;
+      grid-auto-flow: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    .tabs1 {
+      width: 1140px;
+      height: 200px;
+      /* border: 1px solid red; */
+      display: flex;
+      background-color: #dfc49d;
+      margin-right: 90px;
+      border-radius: 10px;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    }
+    .tabs1 .wcc1 {
+      width: 20%;
+    }
+
+    .tabs1 .wcc1 img {
+      height: 200px;
+      width: 100px;
+    }
+
+    .tabs1 .wcc2 {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      /* border: 1px solid red;  */
+      padding: 20px;
+    }
+    .tabs1 .wcc2 a {
+      color: #201b16;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .tabs1 .wcc2 h4 {
+      color: #201b16;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .tabs1 .wcc2 p {
+      color: #201b16;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .tabs1 .wcc2 h5 {
+      margin-top: 0;
+    }
+    .tabs1 .wcc2 .t3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .t3 button {
+      padding: 10px;
+      border-radius: 20px;
+      width: 200px;
+      color: white;
+      background-color: seagreen;
+      border: none;
+      margin-right: 20px;
+    }
+
+
+    /*  */
+    #wrapper2 {
+      width: 100%;
+      max-width: 80%;
+      position: relative;
+      margin: auto;
+    }
+
+    #carousel2 {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    #carousel2::-webkit-scrollbar {
+      height: 0;
+    }
+
+    #prev2,
+    #next2 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #prev2 {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+
+    #next2 {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    #content2 {
+      display: grid;
+      grid-gap: 16px;
+      grid-auto-flow: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    .tab4 {
+      width: 370px;
+      height: 350px;
+      border-radius: 10px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    .tab4 .image {
+      width: 100%;
+      height: 40%;
+      margin-bottom: 20px;
+    }
+    .tab4 .image img {
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .tab4 .b1 {
+      padding: 20px;
+    }
+
+    .tab4 .b1 .bt1 h4 {
+      color: #375250;
+    }
+    .tab4 .b1 .bt1 h6 {
+      color: #797d7d;
+    }
+
+    .tab4 .b1 .bt2 p {
+      color: #9fa3a3;
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .tab4 .b1 .bt3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .tab4 .b1 .bt3 div button {
+      padding: 10px;
+      color: white;
+      background-color: #006241;
+      border: none;
+      border-radius: 20px;
+      width: 100px;
+      margin-right: 10px;
+    }
+
+    .innovations {
+      background-image: url(./Other/background.jpg);
+      width: 80%;
+      border-radius: 10px;
+      margin: auto;
+      height: 300px;
+      background-size: cover;
+      margin-bottom: 100px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .innovations .cc1 button {
+      position: relative;
+      top: 10px;
+      padding: 5px;
+      font-size: 10px;
+      border-radius: 5px;
+      color: #006241;
+      left: 30px;
+    }
+
+    .innovations .cc2 {
+      position: relative;
+      top: 100px;
+      left: 30px;
+    }
+    .innovations .cc2 h1,
+    p {
+      color: white;
+      margin: 5px;
+    }
+
+    .innovations .cc3 button {
+      position: relative;
+      top: 130px;
+      left: 30px;
+      padding: 15px;
+      border-radius: 30px;
+      width: 200px;
+      color: #006241;
+    }
+    .footer {
+      background-color: #0e382c;
+      width: auto;
+      height: 350px;
+      display: flex;
+      padding-top: 100px;
+      justify-content: center;
+      justify-content: space-around;
+    }
+    .footer div li {
+      align-items: center;
+      padding: 15px;
+      color: white;
+    }
+
+    .footer div li:nth-child(1) {
+      font-weight: bold;
+    }
+
+    .copy {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+         padding-right:20px ;
+      background-color: #0e382c;
+      color: white;
+      border-top: 1px solid white;
+  
+    }
+
+    .cl1 {
+      display: flex;
+      flex-direction: row;
+    }
+    .copy .cl1 div{
+
+      padding: 15px;
+  }
+</style>
     <head>
       <nav class="navbar">
         <div class="nav">
@@ -127,5 +630,710 @@
         </div>
       </nav>
     </head>
+
+    <div class="knowMore">
+      <div class="more">
+        <div>
+          <p>A world of rewards awaits you! Sign up now.</p>
+        </div>
+
+        <div>
+          <button>Know More</button>
+        </div>
+      </div>
+    </div>
+    <div class="handcrafted">
+      <div class="box">
+        <div class="head1">Handcrafted Curations</div>
+        <div class="Product">
+          <div>
+            <img src="./Product/Bestseller.jpg" alt="Bestseller" />
+            <label for="Bestseller"> Bestseller</label>
+          </div>
+          <div>
+            <img src="./Product/Drinks.jpg" alt="Drinks" />
+            <label for="Drinks"> Drinks</label>
+          </div>
+          <div>
+            <img src="./Product/Food.jpg" alt="Food" />
+            <label for="Food"> Food</label>
+          </div>
+          <div>
+            <img src="./Product/Merchandise.jpg" alt="Merchandise" />
+            <label for="Merchandise"> Merchandise</label>
+          </div>
+          <div>
+            <img src="./Product/CoffeeAtHome.jpg" alt="CoffeeAtHome" />
+            <label for="CoffeeAtHome"> Coffee At Home</label>
+          </div>
+          <div>
+            <img src="./Product/ReadyToEat.jpg" alt="ReadyToEat" />
+            <label for="ReadyToEat"> Ready To Eat</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Barista Recommends</h3>
+    <div id="wrapper">
+      <div id="carousel">
+        <div id="content">
+          <!-- 1 -->
+          <div class="tabs">
+            <div>
+              <img class="item" src="./Courser/100501.jpg" alt="item1" />
+
+              <label for="Price">₹ 351.75</label>
+            </div>
+
+            <div>
+              <img src="./Courser/veg.svg" alt="veg" />
+              <h4>Java Chip Frappuccion</h4>
+              <h6>TALL(354ML) 392 Kcal</h6>
+              <button
+                class="but"
+                style="padding: 8px; border-radius: 20px; width: 80px"
+              >
+                Add Item
+              </button>
+            </div>
+          </div>
+
+          <!-- 1 -->
+          <div class="tabs">
+            <div>
+              <img class="item" src="./Courser/100447.jpg" alt="item1" />
+
+              <label for="Price">₹ 351.75</label>
+            </div>
+
+            <div>
+              <img src="./Courser/veg.svg" alt="veg" />
+              <h4>Java Chip Frappuccion</h4>
+              <h6>TALL(354ML) 392 Kcal</h6>
+              <button
+                class="but"
+                style="padding: 8px; border-radius: 20px; width: 80px"
+              >
+                Add Item
+              </button>
+            </div>
+          </div>
+
+          <!-- 1 -->
+          <div class="tabs">
+            <div>
+              <img class="item" src="./Courser/100377.jpg" alt="item1" />
+
+              <label for="Price">₹ 351.75</label>
+            </div>
+
+            <div>
+              <img src="./Courser/veg.svg" alt="veg" />
+              <h4>Java Chip Frappuccion</h4>
+              <h6>TALL(354ML) 392 Kcal</h6>
+              <button
+                class="but"
+                style="padding: 8px; border-radius: 20px; width: 80px"
+              >
+                Add Item
+              </button>
+            </div>
+          </div>
+
+          <!-- 1 -->
+          <div class="tabs">
+            <div>
+              <img class="item" src="./Courser/105468.jpg" alt="item1" />
+
+              <label for="Price">₹ 351.75</label>
+            </div>
+
+            <div>
+              <img src="./Courser/veg.svg" alt="veg" />
+              <h4>Java Chip Frappuccion</h4>
+              <h6>TALL(354ML) 392 Kcal</h6>
+              <button
+                class="but"
+                style="padding: 8px; border-radius: 20px; width: 80px"
+              >
+                Add Item
+              </button>
+            </div>
+          </div>
+
+          <!-- 1 -->
+          <div class="tabs">
+            <div>
+              <img class="item" src="./Courser/100501.jpg" alt="item1" />
+
+              <label for="Price">₹ 351.75</label>
+            </div>
+
+            <div>
+              <img src="./Courser/veg.svg" alt="veg" />
+              <h4>Java Chip Frappuccion</h4>
+              <h6>TALL(354ML) 392 Kcal</h6>
+              <button
+                class="but"
+                style="padding: 8px; border-radius: 20px; width: 80px"
+              >
+                Add Item
+              </button>
+            </div>
+          </div>
+
+          <!-- 1 -->
+          <div class="tabs">
+            <div>
+              <img class="item" src="./Courser/100501.jpg" alt="item1" />
+
+              <label for="Price">₹ 351.75</label>
+            </div>
+
+            <div>
+              <img src="./Courser/veg.svg" alt="veg" />
+              <h4>Java Chip Frappuccion</h4>
+              <h6>TALL(354ML) 392 Kcal</h6>
+              <button
+                class="but"
+                style="padding: 8px; border-radius: 20px; width: 80px"
+              >
+                Add Item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+        </svg>
+      </button>
+      <button id="next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Courser2 -->
+    <div id="wrapper1">
+      <div id="carousel1">
+        <div id="content1">
+          <div class="tabs1">
+            <div class="wcc1">
+              <img src="./Other/Hazelnut_Dolce_frappuccino_eae87c32b3.png" />
+            </div>
+            <div class="wcc2">
+              <div class="t1">
+                <a href="#">Presenting</a>
+              </div>
+              <div class="t2">
+                <h4>Hazelnut Dolce Range</h4>
+                <p>
+                  Treat your teste buds to blend of Hazelnut,roast coffee and
+                  mocha with <br />
+                  Hazelnut Dolce frappuccino
+                </p>
+              </div>
+              <div class="t3">
+                <div>
+                  <h6>Starting From</h6>
+                  <h5>₹ 470.00</h5>
+                </div>
+                <div>
+                  <button style="background-color: white; color: black">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs1" style="background-color: #ec9718">
+            <div class="wcc1">
+              <img src="./Other/Group_1241_085b3f7a9e (1).png" />
+            </div>
+            <div class="wcc2">
+              <div class="t1">
+                <a href="#">Presenting</a>
+              </div>
+              <div class="t2">
+                <h4>Hazelnut Dolce Range</h4>
+                <p>
+                  Treat your teste buds to blend of Hazelnut,roast coffee and
+                  mocha with <br />
+                  Hazelnut Dolce frappuccino
+                </p>
+              </div>
+              <div class="t3">
+                <div>
+                  <h6>Starting From</h6>
+                  <h5>₹ 470.00</h5>
+                </div>
+                <div>
+                  <button>Order Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs1" style="background-color: #fb997c">
+            <div class="wcc1">
+              <img src="./Other/Bonus_Stars_2d6733cfde (1).png" />
+            </div>
+            <div class="wcc2">
+              <div class="t1">
+                <a href="#">Presenting</a>
+              </div>
+              <div class="t2">
+                <h4>Hazelnut Dolce Range</h4>
+                <p>
+                  Treat your teste buds to blend of Hazelnut,roast coffee and
+                  mocha with <br />
+                  Hazelnut Dolce frappuccino
+                </p>
+              </div>
+              <div class="t3">
+                <div>
+                  <h6>Starting From</h6>
+                  <h5>₹ 470.00</h5>
+                </div>
+                <div>
+                  <button style="background-color: white; color: black">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs1" style="background-color: #006241">
+            <div class="wcc1">
+              <img src="./Other/Barista_Pride_ca8aec571f.png" />
+            </div>
+            <div class="wcc2">
+              <div class="t1">
+                <a href="#">Presenting</a>
+              </div>
+              <div class="t2">
+                <h4>Hazelnut Dolce Range</h4>
+                <p>
+                  Treat your teste buds to blend of Hazelnut,roast coffee and
+                  mocha with <br />
+                  Hazelnut Dolce frappuccino
+                </p>
+              </div>
+              <div class="t3">
+                <div>
+                  <h6>Starting From</h6>
+                  <h5>₹ 470.00</h5>
+                </div>
+                <div>
+                  <button style="background-color: white; color: black">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs1" style="background-color: #ea3664">
+            <div class="wcc1">
+              <img src="./Other/Image_50_bc2d04c1d9.png" />
+            </div>
+            <div class="wcc2">
+              <div class="t1">
+                <a href="#">Presenting</a>
+              </div>
+              <div class="t2">
+                <h4>Hazelnut Dolce Range</h4>
+                <p>
+                  Treat your teste buds to blend of Hazelnut,roast coffee and
+                  mocha with <br />
+                  Hazelnut Dolce frappuccino
+                </p>
+              </div>
+              <div class="t3">
+                <div>
+                  <h6>Starting From</h6>
+                  <h5>₹ 470.00</h5>
+                </div>
+                <div>
+                  <button style="background-color: white; color: black">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="prev1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <h3>Latest Offerings</h3>
+
+    <!-- Courser2 -->
+    <div id="wrapper2">
+      <div id="carousel2">
+        <div id="content2">
+          <div class="tab4">
+            <div class="image">
+              <img src="./Other/111874.jpg" alt="" />
+            </div>
+            <div class="b1">
+              <div class="bt1">
+                <img src="./Other/veg.svg" alt="vag" />
+                <h4>Red Velvet Cheesecake Latte</h4>
+                <h6>SHORT(237ML)226KCAL</h6>
+              </div>
+              <div class="bt2">
+                <p>
+                  A delicious combination of rich in flavour espresso shot,
+                  milk, cheesecake flavoured syrup and Red velvet cake
+                </p>
+                <p></p>
+              </div>
+
+              <div class="bt3">
+                <div>
+                  <label for="Price">₹ 404.25</label>
+                </div>
+
+                <div>
+                  <button>Add Item</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="tab4">
+            <div class="image">
+              <img src="./Other/113594.jpg" alt="" />
+            </div>
+            <div class="b1">
+              <div class="bt1">
+                <img src="./Other/veg.svg" alt="vag" />
+                <h4>Red Velvet Cheesecake Latte</h4>
+                <h6>SHORT(237ML)226KCAL</h6>
+              </div>
+              <div class="bt2">
+                <p>
+                  A delicious combination of rich in flavour espresso shot,
+                  milk, cheesecake flavoured syrup and Red velvet cake
+                </p>
+                <p></p>
+              </div>
+
+              <div class="bt3">
+                <div>
+                  <label for="Price">₹ 404.25</label>
+                </div>
+
+                <div>
+                  <button>Add Item</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="tab4">
+            <div class="image">
+              <img src="./Other/113597.jpg" alt="" />
+            </div>
+            <div class="b1">
+              <div class="bt1">
+                <img src="./Other/veg.svg" alt="vag" />
+                <h4>Red Velvet Cheesecake Latte</h4>
+                <h6>SHORT(237ML)226KCAL</h6>
+              </div>
+              <div class="bt2">
+                <p>
+                  A delicious combination of rich in flavour espresso shot,
+                  milk, cheesecake flavoured syrup and Red velvet cake
+                </p>
+                <p></p>
+              </div>
+
+              <div class="bt3">
+                <div>
+                  <label for="Price">₹ 404.25</label>
+                </div>
+
+                <div>
+                  <button>Add Item</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="tab4">
+            <div class="image">
+              <img src="./Other/113590.jpg" alt="" />
+            </div>
+            <div class="b1">
+              <div class="bt1">
+                <img src="./Other/veg.svg" alt="vag" />
+                <h4>Red Velvet Cheesecake Latte</h4>
+                <h6>SHORT(237ML)226KCAL</h6>
+              </div>
+              <div class="bt2">
+                <p>
+                  A delicious combination of rich in flavour espresso shot,
+                  milk, cheesecake flavoured syrup and Red velvet cake
+                </p>
+                <p></p>
+              </div>
+
+              <div class="bt3">
+                <div>
+                  <label for="Price">₹ 404.25</label>
+                </div>
+
+                <div>
+                  <button>Add Item</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="prev2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <h3>Learn more about the world of coffee!</h3>
+
+    <div class="innovations">
+      <div class="cc1">
+        <button>Coffee Culture</button>
+      </div>
+      <div class="cc2">
+        <h1>From Rust To Cappuccino</h1>
+        <p>Innovations that gave rise to the world of coffee</p>
+      </div>
+
+      <div class="cc3">
+        <button>Learn More</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <img src="./Other/logo.png" alt="logo" />
+      </div>
+
+      <div>
+        <ul type="none">
+          <li>About Us</li>
+          <li>Our Heritage</li>
+          <li>Our Company</li>
+          <li>Coffeehouse</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul type="none">
+          <li>Responsibility</li>
+          <li>Community</li>
+          <li>Ethical Sourcing</li>
+          <li>Environment</li>
+          <li>Diversity</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul type="none">
+          <li>Quick Links</li>
+          <li>Careers</li>
+          <li>Season's Gifting</li>
+          <li>FAQs</li>
+          <li>Customer Service</li>
+          <li>Delivery</li>
+        </ul>
+      </div>
+
+      <div></div>
+
+      <div>
+        <div>
+          <h4 style="color: white;">SOCIAL MEDIA</h4>
+        </div>
+        <div>
+          <img src="./Other/instagram.svg" alt="" />
+          <img src="./Other/facebook.svg" alt="" />
+          <img src="./Other/twitter.svg" alt="" />
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column">
+        <img src="./Other/appstoreAndroid.png" alt="appstoreAndroid" />
+        <img src="./Other/appstoreiOS.png" alt="appstoreAndroid" />
+      </div>
+    </footer>
+    <div class="copy">
+      <div class="cl1">
+        <div>Web Accessiblity</div>
+        <div>Privacy Statement</div>
+        <div>Terms of Use</div>
+        <div>Contact Us</div>
+      </div>
+      <div class="cl2">
+        © 2023 Starbucks Coffee Company. All rights reserved.
+      </div>
+    </div>
   </body>
 </html>
+
+<script>
+  const gap = 16;
+
+  const carousel = document.getElementById("carousel"),
+    content = document.getElementById("content"),
+    next = document.getElementById("next"),
+    prev = document.getElementById("prev");
+
+  next.addEventListener("click", (e) => {
+    carousel.scrollBy(width + gap, 0);
+    if (carousel.scrollWidth !== 0) {
+      prev.style.display = "flex";
+    }
+    if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+      next.style.display = "none";
+    }
+  });
+  prev.addEventListener("click", (e) => {
+    carousel.scrollBy(-(width + gap), 0);
+    if (carousel.scrollLeft - width - gap <= 0) {
+      prev.style.display = "none";
+    }
+    if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+      next.style.display = "flex";
+    }
+  });
+
+  let width = carousel.offsetWidth;
+  window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
+  // carousel 2
+  const gap1 = 16;
+
+  const carousel1 = document.getElementById("carousel1"),
+    content1 = document.getElementById("content1"),
+    next1 = document.getElementById("next1"),
+    prev1 = document.getElementById("prev1");
+
+  next1.addEventListener("click", (e) => {
+    carousel1.scrollBy(width + gap1, 0);
+    if (carousel1.scrollWidth !== 0) {
+      prev1.style.display = "flex";
+    }
+    if (content1.scrollWidth - width - gap1 <= carousel1.scrollLeft + width) {
+      next1.style.display = "none";
+    }
+  });
+  prev1.addEventListener("click", (e) => {
+    carousel1.scrollBy(-(width + gap1), 0);
+    if (carousel1.scrollLeft - width - gap1 <= 0) {
+      prev1.style.display = "none";
+    }
+    if (!content1.scrollWidth - width - gap1 <= carousel1.scrollLeft + width) {
+      next1.style.display = "flex";
+    }
+  });
+
+  let width1 = carousel1.offsetWidth;
+  window.addEventListener("resize", (e) => (width1 = carousel1.offsetWidth));
+
+  const gap2 = 16;
+
+  const carousel2 = document.getElementById("carousel2"),
+    content2 = document.getElementById("content2"),
+    next2 = document.getElementById("next2"),
+    prev2 = document.getElementById("prev2");
+
+  next2.addEventListener("click", (e) => {
+    carousel2.scrollBy(width + gap2, 0);
+    if (carousel2.scrollWidth !== 0) {
+      prev2.style.display = "flex";
+    }
+    if (content2.scrollWidth - width - gap2 <= carousel2.scrollLeft + width) {
+      next2.style.display = "none";
+    }
+  });
+  prev2.addEventListener("click", (e) => {
+    carousel2.scrollBy(-(width + gap2), 0);
+    if (carousel2.scrollLeft - width - gap2 <= 0) {
+      prev2.style.display = "none";
+    }
+    if (!content2.scrollWidth - width - gap2 <= carousel2.scrollLeft + width) {
+      next2.style.display = "flex";
+    }
+  });
+
+  let width2 = carousel2.offsetWidth;
+  window.addEventListener("resize", (e) => (width2 = carousel2.offsetWidth));
+</script>

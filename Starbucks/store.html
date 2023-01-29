@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks Coffee Company</title>
+    <link rel="icon" type="images/x-icon" href="./Other/logo.png" />
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+
+  <style>
+    body,
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .navbar {
+      /* border: 1px solid red; */
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+      width: 100%;
+      position: fixed;
+      z-index: 5;
+      background-color: white;
+    }
+    .nav {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .left {
+      display: flex;
+      width: 70%;
+    }
+    .left .menu {
+      padding-left: 50px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .menu div {
+      width: 60px;
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .menu div:nth-child(5) a {
+      text-decoration: underline;
+      text-decoration-color: seagreen;
+    }
+    .menu div a {
+      color: #797d7d;
+      text-decoration: none;
+    }
+    .right {
+      display: flex;
+      width: 30%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .logo img {
+      margin: 6px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .right div input {
+      border: none;
+      border-radius: 10px;
+      width: 220px;
+      height: 25px;
+      padding-left: 10px;
+      color: #797d7d;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      outline: none;
+    }
+    .user a span {
+      font-size: 30px;
+      color: #797d7d;
+    }
+.container{
+    width: 85%;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    display: flex;
+     /* border: 1px solid red; */
+}
+
+.container .cl{
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+
+}
+
+.container .cr{
+    width: 60%;
+    
+    /* border: 1px solid red; */
+
+}
+
+.cl .cl1{
+
+    width: auto;
+padding: 20px;
+    background-color: 
+#0e382c;
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+
+}
+.cl .cl1 input{
+   width:80%;
+
+    padding:10px;
+    font-size: 17px;
+    border-radius: 20px;
+    outline: none;
+border: none;
+     
+
+}
+
+.cl div:nth-child(2){
+    width: auto;
+    height: 50%;
+   text-align: center;
+}
+
+.cl div:nth-child(2) img{
+
+}
+
+button{
+    padding: 15px;
+    background-color: #0e382c;
+    color: white;
+    border-radius:30px ;
+    width: 200px;
+    outline: none;
+    border: none;
+}
+    </style>
+</head>
+<body>
+    <head>
+        <nav class="navbar">
+          <div class="nav">
+            <div class="left">
+              <div class="logo">
+                <a href="#">
+                  <img src="./Other/logo.png" alt="logo" />
+                </a>
+              </div>
+              <div class="menu">
+                <div>
+                  <a href="">Home</a>
+                </div>
+                <div>
+                  <a href="#">Gift</a>
+                </div>
+                <div>
+                  <a href="#">Order</a>
+                </div>
+                <div>
+                  <a href="#">Pay</a>
+                </div>
+                <div>
+                  <a href="#">Store</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="right">
+              <div>
+                <input
+                  type="search"
+                  placeholder="Looking for something specific ?"
+                />
+              </div>
+              <div class="user">
+                <a href="#">
+                  <span class="material-symbols-outlined"> account_circle </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </head>
+
+    <div class="container">
+
+    <div class="cl">
+              <div class="cl1">
+                <input type="search" placeholder="Find A store near you">
+              </div>
+
+              <div>
+                  <div>
+                <img src="https://www.starbucks.in/assets/images/storenotofund.svg" alt="image">
+                  </div> 
+
+                  <div>
+                 <h6>No Near By Stores</h6>
+                  <p>Please search For A Different  Location</p> 
+                </div>
+
+                <div>
+                    <button>Explore Menu</button>
+                </div>
+               </div>
+
+    </div>
+    <div class="cr"></div>
+
+    </div>
+</body>
+</html>
