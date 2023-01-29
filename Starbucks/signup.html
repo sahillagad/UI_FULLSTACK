@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      body,
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navbar {
+        /* border: 1px solid red; */
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        width: 100%;
+        position: fixed;
+        z-index: 15;
+        background-color: white;
+      }
+      .nav {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .left {
+        display: flex;
+        width: 70%;
+      }
+      .left .menu {
+        padding-left: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .menu div {
+        width: 60px;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .menu div:nth-child(2) a {
+        text-decoration: underline;
+        text-decoration-color: seagreen;
+      }
+      .menu div a {
+        color: #797d7d;
+        text-decoration: none;
+      }
+      .right {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .logo img {
+        margin: 6px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .right div input {
+        border: none;
+        border-radius: 10px;
+        width: 220px;
+        height: 25px;
+        padding-left: 10px;
+        color: #797d7d;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        outline: none;
+      }
+      .user a span {
+        font-size: 30px;
+        color: #797d7d;
+      }
+
+       
+      .container {
+        position: relative;
+        top: 110px;
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid red; */
+        height: 300px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          border-radius: 10px;
+      }
+
+      .container .boxRight {
+        flex: 1;
+        /* border: 1px solid black; */
+        padding: 10px;
+      }
+      .container .boxleft {
+        flex: 1;
+        /* border: 1px solid black; */
+        padding: 10px;
+      }
+
+      .container .boxleft div:nth-child(1),
+      .container .boxleft div:nth-child(2),
+      .container .boxRight div:nth-child(1),
+      .container .boxRight div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .email div:nth-child(1),
+      .password .lable2,
+      .mobile,
+      .password1 {
+        font-size: 10px;
+        font-weight: 100;
+        margin-top: 20px;
+        color: #1e3932;
+      }
+      .email div:nth-child(2) input,
+      .password div:nth-child(2) input,
+      .mobile div:nth-child(2) input,
+      .password1 div:nth-child(2) input {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid gray;
+        color: #b0b5b5;
+      }
+
+      .infoPassword {
+        display: flex;
+        /* border: 1px solid salmon; */
+        align-items: flex-start;
+      }
+      .infoPassword div {
+        padding: 9px;
+        font-size: 10px;
+      }
+      .btn{
+        width: 200px;
+        padding: 15px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        background-color: #1e3932;
+        
+        position:  relative;
+         left: 43%;
+
+      }
+
+      .footer {
+      background-color: #0e382c;
+      width: auto;
+      height: 350px;
+      display: flex;
+      padding-top: 100px;
+      justify-content: center;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+    .footer div li {
+      align-items: center;
+      padding: 15px;
+      color: white;
+    }
+
+    .footer div li:nth-child(1) {
+      font-weight: bold;
+    }
+
+    .copy {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+         padding-right:20px ;
+      background-color: #0e382c;
+      color: white;
+      border-top: 1px solid white;
+  
+    }
+
+    .cl1 {
+      display: flex;
+      flex-direction: row;
+    }
+    .copy .cl1 div{
+
+      padding: 15px;
+  }
+    </style>
+  </head>
+ 
+    <head>
+      <nav class="navbar">
+        <div class="nav">
+          <div class="left">
+            <div class="logo">
+              <a href="#">
+                <img src="./Other/logo.png" alt="logo" />
+              </a>
+            </div>
+            <div class="menu">
+              <div>
+                <a href="">Home</a>
+              </div>
+              <div>
+                <a href="#">Gift</a>
+              </div>
+              <div>
+                <a href="#">Order</a>
+              </div>
+              <div>
+                <a href="#">Pay</a>
+              </div>
+              <div>
+                <a href="#">Store</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <div>
+              <input
+                type="search"
+                placeholder="Looking for something specific ?"
+              />
+            </div>
+            <div class="user">
+              <a href="#">
+                <span class="material-symbols-outlined"> account_circle </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </head>
+
+    <h3 style="position: relative; top: 100px; margin-left: 110px; color: #0e382c;">Login to Starbucks</h3>
+
+    <div class="container">
+      <div class="boxleft">
+        <div class="email">
+          <div>
+            <label for="EMAIL ID">EMAIL ID</label>
+          </div>
+          <div>
+            <input type="email" placeholder="Enter Email Id" />
+          </div>
+          <div class="check1"></div>
+        </div>
+        <div class="password">
+          <div>
+            <label class="lable2" for="CraetePassword">CREATE PASSWORD</label>
+          </div>
+
+          <div>
+            <input
+              type="password"
+              id="passwordinput1"
+              placeholder="Enter Password"
+            />
+          </div>
+
+          <div class="infoPassword">
+            <div>8 Characters</div>
+            <div>1 Uppercase</div>
+            <div>1 Symbol</div>
+            <div>1 Numeric</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxRight">
+        <div class="mobile">
+          <div>
+            <label for="Mobile">MOBILE NUMBER</label>
+          </div>
+
+          <div>
+            <input type="number" placeholder="Enter Mobile Number" />
+          </div>
+
+          <div></div>
+        </div>
+
+        <div class="password1">
+          <div>
+            <label for="CraetePassword">CREATE PASSWORD</label>
+          </div>
+          <div>
+            <input
+              type="password"
+              id="passwordinput2"
+              placeholder="Enter Password"
+            />
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="btn">Continue</button>
+    <footer class="footer">
+        <div>
+          <img src="./Other/logo.png" alt="logo" />
+        </div>
+  
+        <div>
+          <ul type="none">
+            <li>About Us</li>
+            <li>Our Heritage</li>
+            <li>Our Company</li>
+            <li>Coffeehouse</li>
+          </ul>
+        </div>
+  
+        <div>
+          <ul type="none">
+            <li>Responsibility</li>
+            <li>Community</li>
+            <li>Ethical Sourcing</li>
+            <li>Environment</li>
+            <li>Diversity</li>
+          </ul>
+        </div>
+  
+        <div>
+          <ul type="none">
+            <li>Quick Links</li>
+            <li>Careers</li>
+            <li>Season's Gifting</li>
+            <li>FAQs</li>
+            <li>Customer Service</li>
+            <li>Delivery</li>
+          </ul>
+        </div>
+  
+        <div></div>
+  
+        <div>
+          <div>
+            <h4 style="color: white">SOCIAL MEDIA</h4>
+          </div>
+          <div>
+            <img src="./Other/instagram.svg" alt="" />
+            <img src="./Other/facebook.svg" alt="" />
+            <img src="./Other/twitter.svg" alt="" />
+          </div>
+        </div>
+  
+        <div style="display: flex; flex-direction: column">
+          <img src="./Other/appstoreAndroid.png" alt="appstoreAndroid" />
+          <img src="./Other/appstoreiOS.png" alt="appstoreAndroid" />
+        </div>
+      </footer>
+      <div class="copy">
+        <div class="cl1">
+          <div>Web Accessiblity</div>
+          <div>Privacy Statement</div>
+          <div>Terms of Use</div>
+          <div>Contact Us</div>
+        </div>
+        <div class="cl2">
+          © 2023 Starbucks Coffee Company. All rights reserved.
+        </div>
+      </div>
+  </body>
+</html>
