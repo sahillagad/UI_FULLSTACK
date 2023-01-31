@@ -11,7 +11,7 @@ I want Make Coffee It Full Depandent Statement
 
 var getMilkFromShop = new Promise((resolve, reject) => {
   setTimeout(() => {
-    let isDone = true;
+    let isDone = false;
     if (isDone) {
       resolve(" 1. Get Milk from Shop");
     } else {
@@ -43,16 +43,26 @@ var addSugar = new Promise((resolve, reject) => {
 });
 
 var getCoffee = () => {
-  getMilkFromShop.then((result) => {
-    console.log("getMilkFromShop Promise Call " + result);
+  getMilkFromShop
+    .then((result) => {
+      console.log("getMilkFromShop Promise Call " + result);
 
-    boilMilk.then((output) => {
-      console.log("boilMilk Promise Call " + output);
+      boilMilk
+        .then((output) => {
+          console.log("boilMilk Promise Call " + output);
 
-      addSugar.then((ans) => {
-        console.log("addSugar : " + ans);
-      });
-    });
-  });
+          addSugar
+            .then((ans) => {
+              console.log("addSugar : " + ans);
+            })
+            .catch((err2) => {
+              console.log(err2);
+            });
+        })
+        .catch((err1) => {
+          console.log(err1);
+        });
+    })
+    .catch((err) => {});
 };
 getCoffee();
