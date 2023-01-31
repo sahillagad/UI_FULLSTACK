@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        border: 1px solid red;
+      }
+      th {
+        width: 100px;
+        padding: 10px;
+         background-color: seagreen;
+         color: white;
+
+    }
+    td{
+        width: 100px;
+        padding: 10px;
+        background-color: grey;
+        color: black;
+    }
+     tr th:nth-child(1){
+        border-top-left-radius:10px;
+     }
+     tr th:nth-last-child(1){
+        border-top-right-radius:10px;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Zipcode</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
