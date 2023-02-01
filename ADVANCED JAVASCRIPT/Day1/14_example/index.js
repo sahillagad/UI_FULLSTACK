@@ -33,7 +33,7 @@ getAllUserFromServer()
                       <tr>
                       <td> ${person.id}</td>
                       <td>${person.name}</td>
-                      <td>${person.eamil}</td>
+                      <td>${person.email}</td>
                       <td>${person.phone}</td>
                       <td>${person.website}</td>
                       <td>${person.address.street}</td>

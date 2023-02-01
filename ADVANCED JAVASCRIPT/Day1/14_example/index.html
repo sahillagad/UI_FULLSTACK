@@ -7,27 +7,41 @@
     <title>Document</title>
     <style>
       .table {
-        border: 1px solid red;
+        width: 850px;
+        height: auto;
+        margin: auto;
       }
       th {
         width: 100px;
         padding: 10px;
-         background-color: seagreen;
-         color: white;
-
-    }
-    td{
+        background-color: seagreen;
+        color: white;
+      }
+      td {
+        text-align: center;
         width: 100px;
         padding: 10px;
-        background-color: grey;
-        color: black;
-    }
-     tr th:nth-child(1){
-        border-top-left-radius:10px;
-     }
-     tr th:nth-last-child(1){
-        border-top-right-radius:10px;
-     }
+        background-color: #3b98eb;
+        color: white;
+      
+      }
+
+      tbody tr:last-child td:nth-child(1){
+        border-bottom-left-radius:10px;
+        
+      }
+
+      
+      tbody tr:last-child td:nth-child(8){
+        border-bottom-right-radius:10px;
+        
+      }
+      tr th:nth-child(1) {
+        border-top-left-radius: 10px;
+      }
+      tr th:nth-last-child(1) {
+        border-top-right-radius: 10px;
+      }
     </style>
   </head>
   <body>
