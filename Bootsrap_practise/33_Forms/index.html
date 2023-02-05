@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/UI-FULLSTACK/Bootsrap_practise/00_bootstrap/css/bootstrap.css"
+    />
+    <script src="/UI-FULLSTACK/Bootsrap_practise/00_bootstrap/js/bootstrap.bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="/UI-FULLSTACK/Bootsrap_practise/00_bootstrap/icons/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 m-auto mt-5">
+          <div class="card">
+            <div class="card-header text-white text-bg-warning text-center">
+              <p class="h3">Register</p>
+            </div>
+            <div class="card-body bg-light">
+              <form>
+                <div class="m-3">
+                  <label for="eamil" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="m-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="Password" id="password" class="form-control">
+                    <div class="form-text">Password must be strong</div>
+                </div>
+                <input type="submit" class="btn btn-success text-light ms-3">
+                <input type="submit" value="Cancel" class="btn btn-danger text-light ms-3">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
