@@ -1,0 +1,23 @@
+body{
+    background-color:#f2d1d9;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background:  url(/UI-FULLSTACK/Contact_ManagerApp/Images/pexels-andrea-piacquadio-789822.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  
+}
+
+.landing{
+    width:60%;
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 100vh;
+   
+    position: fixed;
+    top: 30%;
+    left: 20%;
+
+   
+}

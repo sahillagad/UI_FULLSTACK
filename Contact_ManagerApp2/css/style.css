@@ -1,0 +1,27 @@
+body{
+    background-color:#f2d1d9;
+    font-family: 'Poppins', sans-serif;
+      
+}
+
+.landing{ 
+     /* width: auto; */
+     height: 100vh;
+     background: url(/UI-FULLSTACK/Contact_ManagerApp2/Images/pexels-andrea-piacquadio-3791944.jpg) no-repeat;
+     background-size: cover;
+     color: white;
+}
+
+.wrapper{
+    background-color: rgba(0, 0, 0,0.7);
+    height: 100%;
+}
+
+.wrapper div:nth-child(1){
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
