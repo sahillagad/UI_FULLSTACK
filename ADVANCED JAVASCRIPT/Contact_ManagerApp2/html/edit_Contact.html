@@ -88,47 +88,46 @@
     <section  class="container mt-3">
          <div class="row">
               <div class="col-sm-5">
-                <form>
+                <form id="updateForm">
                     <div class="m-2">
-                     <input type="text" placeholder="Name" class="form-control">
+                     <input type="text" placeholder="Name" id="name" class="form-control">
                     </div>
 
                     <div class="m-2">
-                        <input type="text" placeholder="Photo Url" class="form-control">
+                        <input type="text" placeholder="Photo Url" id="iamge" class="form-control">
                        </div>
 
 
                        <div class="m-2">
-                        <input type="text" placeholder="Mobile" class="form-control">
+                        <input type="text" placeholder="Mobile" id="phone" class="form-control">
                        </div>
 
 
                        <div class="m-2">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="text" placeholder="Email" id="email" class="form-control">
                        </div>
 
                        <div class="m-2">
-                        <input type="text" placeholder="Company" class="form-control">
+                        <input type="text" placeholder="Company" id="company" class="form-control">
                        </div>
 
                        <div class="m-2">
-                        <input type="text" placeholder="Title" class="form-control">
+                        <input type="text" placeholder="Title" id="title" class="form-control">
                        </div>
 
                        <div class="m-2">
-                         
-                    
-                            <select class="form-select form-select-lg" name="" id="">
-                                <option selected>Select one</option>
-                                <option value="Colleagues">Colleagues</option>
-                                <option value="Family">Family</option>
-                                <option value="Friends">Friends</option>
-                                <option value="Customer">Customer</option>
-                                <option value="Client">Client</option>
-                                <option value="Social">Social</option>
-                                <option value="Service">Service</option>
-                            </select>
-                         
+                        <select  required class="form-select form-select-lg" name="" id="groupId">
+                          <option selected>Select one</option>
+                          <option value="1">Colleagues</option>
+                          <option value="2">Friends</option>
+                          <option value="3">Family</option>
+                          <option value="4">Service</option>         
+                          <option value="5">Customer</option>
+                          <option value="6">Social</option>
+                          <option value="7">Client</option>
+                  
+              
+                      </select>
                     </div>
 
                     
@@ -143,11 +142,13 @@
 
               <div class="col-sm-5">
                <div class="m-2"> 
-                <img src="../Images/images (1).jpg" class="img-fluid rounded-circle shadow-lg" alt="">
+                <img id="showImg" src=""  class="img-fluid rounded-circle shadow-lg"  alt="">
                </div>  
               </div>
          </div>
     </section>
 
+     <script src="../Javascript/edit_Contact.js" type="module"></script>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </body>
   </html>

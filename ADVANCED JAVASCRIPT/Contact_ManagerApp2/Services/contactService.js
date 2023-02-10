@@ -17,13 +17,13 @@ export const getContactById = (contactId) => {
 };
 
 export const createContact = (contact) => {
-  let postConactUri = uri + "/contacts";
-  return axios.post(postConactUri);
+  let postConactUri = uri + "/contacts/";
+  return axios.post(postConactUri,contact);
 };
 
 export const updateContact = (contact, contactId) => {
   let putConactUri = uri + "/contacts/" + contactId;
-  return axios.put(putConactUri);
+  return axios.put(putConactUri,contact);
 };
 
 export const getDeleteContactById = (contactId) => {
@@ -45,15 +45,51 @@ export const getGroupById = (groupId) => {
 
 export const addGroups = (group) => {
   let addGroups = uri + "groups";
-  return axios.post(addGroups);
+  return axios.post(addGroups,group);
 };
 
 export const updateGroups = (group, groupId) => {
   let updateGroup = uri + "/groups/" + groupId;
-  return axios.put(updateGroup);
+  return axios.put(updateGroup,group);
 };
 
 export const deleteGroupById = (groupId) => {
   let deleteGroupByIdUri = uri + "/groups/" + groupId;
   return axios.delete(deleteGroupByIdUri);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export const getAllFood=()=>{
+// var uri="https://www.themealdb.com/api/json/v1/1/search.php?s=chicken";
+//   return axios.get(uri);
+// }
+
+// contcatService.getAllFood().then((result) => {
+//   console.log(result.data.meals)
+// }).catch((err) => {
+// console.log(err)
+
+// }); 

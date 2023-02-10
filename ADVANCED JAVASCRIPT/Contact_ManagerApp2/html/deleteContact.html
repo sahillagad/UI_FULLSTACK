@@ -24,7 +24,6 @@
     rel="stylesheet"
     href="/UI-FULLSTACK/Contact_ManagerApp2/Bootstrap/BoostrapIcons/bootstrap-icons-1.10.3/bootstrap-icons.css"
   />
-
 <!-- Google Font Connect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +38,6 @@
 </head>
 </head>
 <body> 
-
-  <!-- Navbar -->
   <!-- Navbar -->
   <nav class="navbar navbar-expand-sm" style="background-color:#f73d6b;">
     <div class="container">
@@ -64,45 +61,31 @@
      </div>
     </div>
  </nav>
+ 
 
+ <section class="container mt-3">
 
-<!-- Heading -->
-<section class="container mt-3">
-
-  <div class="row">
-  <div col-sm-12>
-    <div class=" d-flex  flex-row">
-      <p class="h3 me-3" style="color: #f73d6b;">Contact Manager</p>
-      <a href="./add_Contact.html" type="button" class="btn btn-success d-flex justify-content-center align-content-center" > <span class="material-symbols-outlined">
-        add_circle
-        </span> New</a>
-    </div>
-
-    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, numquam! Qui animi nobis debitis! Maxime est fugiat odit placeat ipsa quas. Libero unde doloremque, enim laborum illum harum cum accusamus.</p>
-  </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-5">
-      <form id="searchBYIDForm" class="d-flex flex-row">
-        <input type="text" placeholder="Search Contact" id="valueOfSearch" class="form-control">
-        <input type="submit" id="Search" value="Search" class="btn btn-danger">
-      </form>
+    <div class="row">
+    <div col-sm-12>
+      <div class=" d-flex  flex-row">
+        <p class="h3 me-3 text-danger">Delete Contact</p>
+        <!-- <a href="./contactAdmin.html" type="button" class="btn btn-warning d-flex justify-content-center align-content-center" ><span class="material-symbols-outlined">
+            contact_page
+            </span> View All Contacts</a> -->
+      </div>
   
+      <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, numquam! Qui animi nobis debitis! Maxime est fugiat odit placeat ipsa quas. Libero unde doloremque, enim laborum illum harum cum accusamus.</p>
     </div>
-  </div>
+    </div>
 
-</section>
-
-      <section class="container mt-5">
-           <div class="row" id="dataPast">
-      <!-- Get All Data From Server -->
-           </div>
-      </section>
+    </section>
 
 
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="../Javascript/contactAdmin.js" type="module"></script>
-      <!-- WE Use Some Services Also Thats WE Use module Here  -->
-    </body>
-    </html>
+ <div class="container mt-4" id="postData1">
+
+   
+ </div>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="../Javascript/deleteContact.js" type="module"></script>
+  </body>
+  </html> 

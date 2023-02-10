@@ -1,68 +1,26 @@
+import * as contactService from "../Services/contactService.js";
 
-import * as contcatService from  "../Services/contactService.js";
-// Land On This Page View The Uri There Is  Id We get That   Id And Call Service Method
+window.addEventListener("DOMContentLoaded", () => {
+  var contactId = document.URL.split("=")[1];
 
-window.addEventListener("DOMContentLoaded",()=>{
-
-// Read URI 
-// way 1
-// const uri=window.location.href;
-// console.log(uri)
-
-//way 2
-const uri1=document.URL;
-console.log(uri1)
-
-// I Want Only Contect Id We Not Want Whole Uri
-// For That WE Use The Split Inbulit Function
-
-var arr=uri1.split("?")
-// console.log(arr)
-
-var key=arr[1].split("=")[1];
-FetchData(key);
-
-})
-
-
-
-
-
-
-function FetchData(key){
-
-      contcatService.getContactById(key).then((result) => {
-        
-        // console.log(result)
-        // console.log(result.data)
-
-
-                            var groupId=result.data.groupId;
-                
-                            contcatService.getGroupById(groupId).then((group) => {
-                                
-                                displayData(result.data,group.data);
-                                
-                             
-
-                            }).catch((message)=>{
-                              console.log(message)
-                            })
-     
-       
-
-      }).catch((err) => {
-        console.log(err)
-
-      });;
-}
-
+  contactService.getContactById(contactId).then((result) => {
+    var contactDetail = result.data;
+     var groupId=result.data.groupId;
+      contactService.getGroupById(groupId).then((res) => {
+                     
+                        var group=res.data;
+                        displayData(contactDetail,group); 
+                        getDeleteContactById(contactDetail.id);
+                    });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 var postData1=document.querySelector("#postData1");
 
-var displayData=(contact,group)=>{
-    console.log(contact);
-    console.log(group);
+function   displayData(contact,group){
 
     var contactData=`
     <div class="row align-items-center">
@@ -113,10 +71,31 @@ var displayData=(contact,group)=>{
      
 postData1.innerHTML=contactData;
 
+
 }
 
 
 
+function getDeleteContactById(contactId){
+    setTimeout(()=>{
+    var ans=confirm("Are Sure To Delete This Contact");
+ console.log(ans)
+     if(ans==true){
+ 
+        contactService.getDeleteContactById(contactId).then((result) => {
+            window.location.href="../html/contactAdmin.html"; 
+          }).catch((err) => {
+             console.log(err);
+          });
+ 
+     }
+     else{
+ 
+        
+        window.location.href="../html/contactAdmin.html"; 
+     }
+  
+    },1000)
 
 
-
+ }

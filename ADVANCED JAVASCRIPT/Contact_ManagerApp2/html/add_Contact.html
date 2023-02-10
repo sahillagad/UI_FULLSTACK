@@ -87,52 +87,60 @@
     <section  class="container mt-3">
          <div class="row">
               <div class="col-sm-5">
-                <form>
+                <form id="formAddContact">
                     <div class="m-2">
-                     <input type="text" placeholder="Name" class="form-control">
+                     <input required type="text" placeholder="Name" id="name" class="form-control">
                     </div>
 
                     <div class="m-2">
-                        <input type="text" placeholder="Photo Url" class="form-control">
+                        <input required type="text" placeholder="Photo Url" id="image" class="form-control">
                        </div>
 
 
                        <div class="m-2">
-                        <input type="text" placeholder="Mobile" class="form-control">
+                        <input required type="text" placeholder="Mobile" id="phone" class="form-control">
                        </div>
 
 
                        <div class="m-2">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input required type="text" placeholder="Email" id="email" class="form-control">
                        </div>
 
                        <div class="m-2">
-                        <input type="text" placeholder="Company" class="form-control">
+                        <input required type="text" placeholder="Company" id="company" class="form-control">
                        </div>
 
                        <div class="m-2">
-                        <input type="text" placeholder="Title" class="form-control">
+                        <input required type="text" placeholder="Title" id="title" class="form-control">
                        </div>
 
                        <div class="m-2">
                          
+               
+                        
+                        <!-- Select We Give The Requird But Value Is Internally 
+                         you select Compulsory
+                         but if select group that value is empty than
+                         here we give value (= value="1")
+                        -->
+                            <select  required class="form-select form-select-lg" name="" id="groupId">
+                                <option selected value="">Select one</option>
+                                <option value="1">Colleagues</option>
+                                <option value="2">Friends</option>
+                                <option value="3">Family</option>
+                                <option value="4">Service</option>         
+                                <option value="5">Customer</option>
+                                <option value="6">Social</option>
+                                <option value="7">Client</option>
+                        
                     
-                            <select class="form-select form-select-lg" name="" id="">
-                                <option selected>Select one</option>
-                                <option value="Colleagues">Colleagues</option>
-                                <option value="Family">Family</option>
-                                <option value="Friends">Friends</option>
-                                <option value="Customer">Customer</option>
-                                <option value="Client">Client</option>
-                                <option value="Social">Social</option>
-                                <option value="Service">Service</option>
                             </select>
                          
                     </div>
-
+                   
                     
                     <div class="m-2">
-                      <input type="submit" value="Save" class="btn btn-success">
+                      <input type="submit" value="Save" id="btnSave" class="btn btn-success">
                       <a href="./contactAdmin.html"  class="btn btn-warning text-white">
                         Cancel
                          </a>
@@ -142,11 +150,15 @@
 
               <div class="col-sm-5">
                <div class="m-2"> 
-                <img src="../Images/images (1).jpg" class="img-fluid rounded-circle shadow-lg" alt="">
+                <img src="../Images/images (1).jpg" id="imageShow" style="visibility: hidden;" class="img-fluid  rounded-circle shadow-lg" alt="">
                </div>  
               </div>
          </div>
     </section>
 
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../Javascript/add_Contact.js" type="module"></script>
   </body>
   </html>

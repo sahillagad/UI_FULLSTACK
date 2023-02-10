@@ -55,7 +55,7 @@ const displayData=(contact)=>{
                   Mobile : <span class="fw-bold">${contact[i].mobile}</span>
               </li>
                 <li class="list-group-item">
-                  Email : <span class="fw-bold">${contact[i].eamil}</span>
+                  Email : <span class="fw-bold">${contact[i].email}</span>
               </li>
               </ul>
              </div>
@@ -64,10 +64,11 @@ const displayData=(contact)=>{
                          <a href="./viewContact.html?contactId=${contact[i].id}" class="btn btn-warning m-1">
                           <i class="bi bi-eye"></i>
                          </a>
-                         <a href="./edit_Contact.html" class="btn btn-primary m-1" >
+                         <a href="./edit_Contact.html?contactId=${contact[i].id}" class="btn btn-primary m-1" >
                           <i class="bi bi-pencil"></i>
                          </a>
-                          <button class="btn btn-danger m-1">
+                          <button  onclick="window.location.href='./deleteContact.html?contactId=${contact[i].id}'" class="btn btn-danger m-1">
+
                             <i class="bi bi-trash"></i>
                           </button>
              </div>
@@ -80,48 +81,23 @@ const displayData=(contact)=>{
  
 // console.log(contactCardEmement)
     dataPast.innerHTML=contactCardEmement;
-    
+  
+  }
+// If You Click On Delete Than We Want The ReLoad The Page
+// Load The Same Page 
+// you use  For Reload
+// window Reload Also WE Use  
 
-}
 
-/*
-contactCardEmement=contactCardEmement+`<div class="col-sm-6">
-       <div class="card shadow-lg m-2">
-         <div class="card-body bg-light rounded-2" >
-        <div class="row align-items-center">
-            <div class="col-sm-3">
-              <img src=${contact[i].imageuri} class="img-fluid rounded-circle shadow-sm" alt="">
-            </div>
-            <div class="col-sm-7">
-             <ul class="list-group">
-               <li class="list-group-item">
-                   Name : <span class="fw-bold">${contact[i].name}</span>
-               </li>
-               <li class="list-group-item">
-                 Mobile : <span class="fw-bold">${contact[i].mobile}</span>
-             </li>
-               <li class="list-group-item">
-                 Email : <span class="fw-bold">${contact[i].eamil}</span>
-             </li>
-             </ul>
-            </div>
-            <div class="col-sm-2 d-flex flex-column justify-content-around">
-             
-                        <a href="./viewContact.html" class="btn btn-warning m-1">
-                         <i class="bi bi-eye"></i>
-                        </a>
-                        <a href="./edit_Contact.html" class="btn btn-primary m-1" >
-                         <i class="bi bi-pencil"></i>
-                        </a>
-                         <button class="btn btn-danger m-1">
-                           <i class="bi bi-trash"></i>
-                         </button>
-            </div>
-        </div>
-         </div>                  
-       </div>
-      </div>`
 
-*/
+var SearchForm=document.querySelector("#searchBYIDForm");
 
-// Based On I
+SearchForm.addEventListener("submit",(event)=>{
+ event.preventDefault();
+ var contactId=document.querySelector("#valueOfSearch").value;
+ window.location.href="../html/viewContact.html?contactId="+contactId;
+  
+
+
+})
+
